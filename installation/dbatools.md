@@ -18,3 +18,7 @@ Beta release can be installed with a `-PreRelease` switch:
 Install-DbaSqlWatch -SqlInstance DevServer1 -Database SQLWATCH -PreRelease
 ```
 
+{% hint style="danger" %}
+Beta releases can contain bugs and are **not** suitable for production deployments. 
+{% endhint %}
+
