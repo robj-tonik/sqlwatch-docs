@@ -1,4 +1,4 @@
-# dbatools
+# Installing with dbatools
 
 SQLWATCH can be installed across multiple-servers using dbatools:
 
