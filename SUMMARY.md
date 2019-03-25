@@ -3,5 +3,6 @@
 * [SQLWATCH Documentation](README.md)
 * [Installation](installation/README.md)
   * [Installing with dbatools](installation/dbatools.md)
-* [Concept](concept.md)
+* [Concept](concept/README.md)
+  * [Architecture](concept/architecture.md)
 
