@@ -1,6 +1,6 @@
 # Table of contents
 
-* [SQLWATCH Documentation](README.md)
+* [Welcome](README.md)
 * [Concept](concept/README.md)
   * [Architecture](concept/architecture.md)
 * [Requirements](requirements/README.md)
