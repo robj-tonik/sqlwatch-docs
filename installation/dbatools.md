@@ -1,4 +1,14 @@
-# Installing with dbatools
+# Install with dbatools
+
+## Introduction
+
+[dbatools ](https://dbatools.io/)is a free PowerShell module with over 500 SQL Server best practice, administration, development and migration commands included. 
+
+## Prerequisites
+
+1. [dbatools ](https://dbatools.io/)must be installed on the computer running installation and the computer must have internet access in order to download SQLWATCH release. Best practice is to run installation from a client PC and not on the server.
+
+## Stable releases
 
 SQLWATCH can be installed across multiple-servers using dbatools:
 
