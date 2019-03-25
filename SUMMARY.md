@@ -3,6 +3,9 @@
 * [SQLWATCH Documentation](README.md)
 * [Concept](concept/README.md)
   * [Architecture](concept/architecture.md)
+* [Requirements](requirements/README.md)
+  * [System requirements](requirements/system-requirements.md)
+  * [Storage requirements](requirements/storage-requirements.md)
 * [Installation](installation/README.md)
   * [Installing with dbatools](installation/dbatools.md)
 
