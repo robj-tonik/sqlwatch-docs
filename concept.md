@@ -1,4 +1,6 @@
-# Concept
+# Introduction
+
+## Concept
 
 SQLWATCH is a decentralised monitoring system with centralised reporting, but without centralised repository. It relies on the SQL Server Agent to invoke data collection and therefore the collection must happen to a local database.
 
@@ -7,4 +9,10 @@ Most enterprise monitoring solutions are centralised which means they often cons
 SQLWATCH has been designed to address some these challenges, especially in a smaller or test environments where dedicated monitoring infrastructure is not feasible. 
 
 Automation and integration with [dbatools ](https://dbatools.io)makes it easy to keep decentralised deployment in sync and up to date.
+
+## Architecture
+
+![](.gitbook/assets/sqlwatch_architecture-890x1024.png)
+
+
 

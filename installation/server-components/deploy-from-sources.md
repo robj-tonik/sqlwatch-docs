@@ -18,11 +18,11 @@ To deploy from Visual Studio follow the below steps:
 
 Open solution in Visual Studio and go to Build in the main menu and select Publish SQLWATCH:
 
-![Visual Studio build project](../.gitbook/assets/deploy_from_visual_studio_solution.png)
+![Visual Studio build project](../../.gitbook/assets/deploy_from_visual_studio_solution.png)
 
 Next, set connection to your SQL Server where you would like to deploy it:
 
-![Visual Studio deployment parameters](../.gitbook/assets/deploy_datatier_application_and_register.png)
+![Visual Studio deployment parameters](../../.gitbook/assets/deploy_datatier_application_and_register.png)
 
 > Make sure you tick “Register as a Data-tier Application” in the Publish Database Options. This will make an entry in the `msdb.dbo.sysdac_instances` which will allow you to see which version is installed.
 
@@ -30,9 +30,9 @@ Next, set connection to your SQL Server where you would like to deploy it:
 select * from msdb.dbo.sysdac_instances where database_name = 'SQLWATCH'
 ```
 
-![](../.gitbook/assets/sysdacinstances.png)
+![](../../.gitbook/assets/sysdacinstances.png)
 
 You can track progress in the Output pane:
 
-![Visual Studio deployment progress](../.gitbook/assets/deploy_from_visual_studio_progress.png)
+![Visual Studio deployment progress](../../.gitbook/assets/deploy_from_visual_studio_progress.png)
 
