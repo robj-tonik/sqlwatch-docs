@@ -14,5 +14,5 @@ To upgrade with the command line utility `SqlPackage.exe` simply re-run the inst
 
 To upgrade using SQL Server Management Studio please follow the installation steps with the only different being that instead of Deploy Data-tier Application you will have to click on the database you want to upgrade \(SQLWATCH\) and select **Upgrade Data-tier Application**
 
-![SSQM Upgrade DacPac](../.gitbook/assets/upgrade-database-dacpac.png)
+![Upgrading Date-tier Application \(DacPac\) in SQL Server Management Studio](../.gitbook/assets/upgrade-database-dacpac.png)
 
