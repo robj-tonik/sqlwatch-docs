@@ -2,7 +2,7 @@
 
 ## Introduction
 
-`SqlPacakge.exe` is a command line utility that automates SQL Server database deployments. This command comes with SQL Server Management Studio \(SSMS\) and is located in the ...\DAC\bin\ folder:
+`SqlPackage.exe` is a command line utility that automates SQL Server database deployments. This command comes with SQL Server Management Studio \(SSMS\) and is located in the ...\DAC\bin\ folder:
 
 `C:\Program Files (x86)\Microsoft SQL Server\140\DAC\bin\SqlPackage.exe`
 
