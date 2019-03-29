@@ -4,7 +4,7 @@
 
 If you encounter collation conflict during installation it means that your server’s collation is different to the SQLWATCH database collation and SQL cannot handle string comparisons.
 
-We use the `Latin1_General_CI_AS` collaction.
+We use the `Latin1_General_CI_AS` collation.
 
 There are two ways to solve this
 
