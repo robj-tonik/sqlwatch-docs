@@ -2,7 +2,7 @@
 
 ## Introduction
 
-`SqlPackage.exe` is a command line utility that automates SQL Server database deployments. This command comes with SQL Server Management Studio \(SSMS\) and is located in the ...\DAC\bin\ folder:
+`SqlPackage.exe` is a command line utility that automates SQL Server database deployments. This command comes with SQL Server Management Studio \(SSMS\) and is located in the ...\DAC\bin folder:
 
 `C:\Program Files (x86)\Microsoft SQL Server\140\DAC\bin\SqlPackage.exe`
 
@@ -16,7 +16,7 @@ You can read more about `SqlPackage.exe` in [Microsoft Docs](https://docs.micros
 
 ## Installation
 
-Download the required release from our [GitHub Releases](https://github.com/marcingminski/sqlwatch/releases) and unzip. In this example we are using C:\Temp 
+Download the required release from our [GitHub Releases](https://github.com/marcingminski/sqlwatch/releases) and unzip. In this example we are using C:\Temp
 
 An example command to install SQLWATCH:
 
@@ -26,8 +26,6 @@ SqlPackage.exe
     /SourceFile:C:\Temp\SQLWATCH.dacpac 
     /TargetDatabaseName:SQLWATCH 
     /TargetServerName:YOURSQLSERVER 
-    /p:RegisterDataTierApplication=True  
+    /p:RegisterDataTierApplication=True
 ```
-
-
 

@@ -17,9 +17,9 @@ CREATE DATABASE [SQLWATCH]
 GO
 ```
 
-Once the empty shell database has been created we can proceed with installation as usual. 
+Once the empty shell database has been created we can proceed with installation as usual.
 
 ## Option 2: Rebuild project into the desired target collation
 
-If the above does not meet your requirements you can load the database solution in Visual Studio \(please follow "Deploy from source code" guide for details\) , change database collation to the desired value and rebuild and deploy. 
+If the above does not meet your requirements you can load the database solution in Visual Studio \(please follow "Deploy from source code" guide for details\) , change database collation to the desired value and rebuild and deploy.
 

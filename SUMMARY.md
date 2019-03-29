@@ -30,11 +30,11 @@
 ## Reference
 
 * [Data-Tier Application Package](reference/data-tier-application-package.md)
-* [Perofrmance counters](reference/perofrmance-counters.md)
+* [Performance counters](reference/perofrmance-counters.md)
 
 ## Known issues and limitations
 
-* [Collation conflict](known-issues/collation-conflict.md)
-* [Time zone changes](known-issues/time-zone-changes.md)
-* [Login failed error when running disk logger](known-issues/login-failed-error-when-running-disk-logger.md)
+* [Collation conflict](known-issues-and-limitations/collation-conflict.md)
+* [Time zone changes](known-issues-and-limitations/time-zone-changes.md)
+* [Login failed error when running disk logger](known-issues-and-limitations/login-failed-error-when-running-disk-logger.md)
 

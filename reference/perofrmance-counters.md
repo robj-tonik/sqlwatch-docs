@@ -1,4 +1,4 @@
-# Perofrmance counters
+# Performance counters
 
 LIst of performance counters defined and collected by SQLWATCH. For the actual colleciton please check the `[collect]` column where 1 indicates that the counter is collected and 0 indicates that it is not collected.
 
