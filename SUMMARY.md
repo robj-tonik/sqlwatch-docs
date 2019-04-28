@@ -37,4 +37,5 @@
 * [Collation conflict](known-issues-and-limitations/collation-conflict.md)
 * [Time zone changes](known-issues-and-limitations/time-zone-changes.md)
 * [Login failed error when running disk logger](known-issues-and-limitations/login-failed-error-when-running-disk-logger.md)
+* [Database drift](known-issues-and-limitations/database-drift.md)
 
