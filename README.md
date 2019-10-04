@@ -1,5 +1,9 @@
 # Welcome
 
+{% hint style="warning" %}
+Please note documentation for version 2.0 is currently being written and is not complete.
+{% endhint %}
+
 This is SQLWATCH documentation portal. 
 
 If you do not find what you are looking for, you can contact me on our [Slack channel](https://sqlcommunity.slack.com/messages/CCCETQBFZ)
