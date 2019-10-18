@@ -20,7 +20,8 @@
 ## Configuration
 
 * [Post-deployment configuration](configuration/data.md)
-* [User configuration](configuration/user-configuration.md)
+* [User configuration](configuration/user-configuration/README.md)
+  * [PowerBI Report Parameters](configuration/user-configuration/powerbi-report-parameters.md)
 
 ## Reference
 
