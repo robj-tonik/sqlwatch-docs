@@ -2,6 +2,10 @@
 
 Similarly to the installation, SQLWATCH can be upgraded in various ways.
 
+{% hint style="warning" %}
+Direct upgrade to 2.0 from previous versions is currently not supported. Due to the number of breaking changes I am working on manual data migration scripts, however until these are ready, please deploy as a new database. If you would like to retain old performance data you can rename or backup old SQLWATCH databases.
+{% endhint %}
+
 ## Upgrade with dbatools
 
 To upgrade SQLWATCH using dbatools simply re-run the installation with `Install-DbSqlWatch` and it will automatically bring the database schema to the most recent version. If the database is already the most recent version the `Install-DbaSqlWatch` will not make any changes. 
