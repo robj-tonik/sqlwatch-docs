@@ -6,7 +6,7 @@
 
 ![I/O &amp; Memory](.gitbook/assets/image%20%2815%29.png)
 
-![Locks &amp; Pages](.gitbook/assets/image%20%2819%29.png)
+![Locks &amp; Pages](.gitbook/assets/image%20%2820%29.png)
 
 ![Data &amp; Log Files](.gitbook/assets/image%20%285%29.png)
 
@@ -20,7 +20,7 @@
 
 ![Index statistics &amp; Histogram](.gitbook/assets/image%20%284%29.png)
 
-![Missing index analysis](.gitbook/assets/image%20%2821%29.png)
+![Missing index analysis](.gitbook/assets/image%20%2822%29.png)
 
 ![Disk utilisation](.gitbook/assets/image%20%283%29.png)
 
