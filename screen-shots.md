@@ -1,4 +1,8 @@
-# Screenshots
+# Screenshots and Demo
+
+[Live Demo in the PowerBI Portal](https://app.powerbi.com/view?r=eyJrIjoiYzVhMWNjZTktYWNkMC00YmZjLTg1NWItNzM4YTBjYzFjYjlhIiwidCI6IjQ0YTc5YzhlLWE0NDItNGQ0My04ZmQ4LTFjZTM0MTEyNGIwZSJ9)
+
+## Screenshots
 
 ![Servers overview](.gitbook/assets/image%20%2817%29.png)
 

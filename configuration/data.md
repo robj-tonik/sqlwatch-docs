@@ -8,6 +8,8 @@ Default configuration is applied during deployment and although there is no manu
 
 This job is responsible for collection dimension objects, i.e. list of databases, tables, indexes etc for the normalised schema. Equally, when new database or table is added, any metric that relates to this database or table will not be collected until the job `SQLWATCH-INTERNAL-META-CONFIG` runs again. This is to improve performance of the performance collector job and avoid getting list of relatively static objects every minute. 
 
+`exec msdb.dbo.sp_start_job @job_name = 'SQLWATCH-INTERNAL-META-CONFIG'`
+
 ## Enabling Agent Jobs
 
 ### Local collector jobs
@@ -23,4 +25,13 @@ There is no predefined agent job for the repository collector due to variety of 
 A number of Extended Events Sessions are also deployed with SQLWATCH in a disabled state. This is because some DBAs will have their own XES sessions and we would not want to interfere without prior notice. However, certain functionality will not be available, for the full experience please enable SQWLATCH sessions.
 
 ![](../.gitbook/assets/image%20%2819%29.png)
+
+`ALTER EVENT SESSION SQLWATCH_blockers ON SERVER  
+STATE = start;  
+  
+ALTER EVENT SESSION SQLWATCH_long_queries ON SERVER  
+STATE = start;  
+  
+ALTER EVENT SESSION SQLWATCH_waits ON SERVER  
+STATE = start;`
 
