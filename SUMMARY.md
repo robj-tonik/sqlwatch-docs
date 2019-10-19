@@ -1,7 +1,8 @@
 # Table of contents
 
 * [Welcome](README.md)
-* [Introduction](concept.md)
+* [Introduction](concept/README.md)
+  * [Structure](concept/structure.md)
 * [Requirements](requirements.md)
 * [Screenshots](screen-shots.md)
 * [Installation](installation/README.md)
@@ -21,6 +22,7 @@
 
 * [Post-deployment configuration](configuration/data.md)
 * [User configuration](configuration/user-configuration/README.md)
+  * [SQL Server Configuration](configuration/user-configuration/sql-server-configuration.md)
   * [PowerBI Report Parameters](configuration/user-configuration/powerbi-report-parameters.md)
 
 ## Reference
