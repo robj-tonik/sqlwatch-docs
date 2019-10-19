@@ -10,7 +10,13 @@ This job is responsible for collection dimension objects, i.e. list of databases
 
 ## Enabling Agent Jobs
 
+### Local collector jobs
+
 All jobs are enabled by default with the exception of the `SQLWATCH-LOGGER-WHOISACTIVE` which is only enabled when `sp_WhoIsActive` is found in the `master` database. If not found, the job is deployed in a disabled state. 
+
+### Central repository collector
+
+There is no predefined agent job for the repository collector due to variety of environments, Once the package has been deployed onto the preferred Integration Services Server and configured please crate agent job with the schedule as you please. 
 
 ## Enabling Extended Events Sessions \(XES\)
 
