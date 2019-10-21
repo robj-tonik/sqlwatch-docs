@@ -20,11 +20,15 @@ All jobs are enabled by default with the exception of the `SQLWATCH-LOGGER-WHOIS
 
 There is no predefined agent job for the repository collector due to variety of environments, Once the package has been deployed onto the preferred Integration Services Server and configured please crate agent job with the schedule as you please. 
 
+When scheduling the dtsx, the control package should be called from the agent job:
+
+![](../.gitbook/assets/image.png)
+
 ## Enabling Extended Events Sessions \(XES\)
 
 A number of Extended Events Sessions are also deployed with SQLWATCH in a disabled state. This is because some DBAs will have their own XES sessions and we would not want to interfere without prior notice. However, certain functionality will not be available, for the full experience please enable SQWLATCH sessions.
 
-![](../.gitbook/assets/image%20%2819%29.png)
+![](../.gitbook/assets/image%20%2820%29.png)
 
 `ALTER EVENT SESSION SQLWATCH_blockers ON SERVER  
 STATE = start;  
