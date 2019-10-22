@@ -1,7 +1,3 @@
----
-description: Community help needed.
----
-
 # Space consideration
 
 Space requirement and growth will vary per environment. The more databases, data files, and workload the bigger the collected data will be. 
@@ -22,23 +18,7 @@ Page level table and index compression is recommended. Table compression can be 
 
 ## Design Considerations that impact storage utilisation. 
 
-Some design considerations affect storage requirements, such as the use of 16 bytes long `sequential uniqueidentifier` data types in Primary Keys in order to allow data to be collected in central repository without collisions. Whilst  `smallint` IDENTITY fields would be preferable and with appropriate composite Primary Key would not cause duplication, we would still have to deal with repeating values in destination IDENTITY columns. 
+Some design considerations affect storage requirements, such as the use of 16 bytes long `sequential uniqueidentifier` data types in Primary Keys in order to allow data to be collected in central repository without collisions. Whilst `smallint` IDENTITY fields would be preferable and with appropriate composite Primary Key would not cause duplication, the Power BI is not able to create schema relations based on multiple columns. It requires one unique column. A work around would require building composite keys in the Power Query which could slow down the data load process and prevent query folding \(as it was in version 1.x\).
 
-Another benefit of  `uniqueidentifier`  is the fact that Power BI is not able to create schema relations based on multiple columns. It requires one unique column. A work around would require building composite keys in the Power Query which could slow down the data load process and prevent query folding.
 
-An option is to generate our own integer based, random keys \(4 bytes `integer`, 4 times smaller than `GUID`\):
-
-`select convert(int,binary_checksum(newid()))`
-
-Or a time based, similar to a Unix timestamp \(4 bytes `integer`, 4 times smaller than `GUID`\):
-
-`select convert(int,datediff(second,{d '1970-01-01'}, getutcdate()))`
-
-or even with greater capacity and precision \(8 bytes `bigint`, half the size of the `GUID`\):
-
-`select convert(BIGINT,DATEDIFF_BIG(MILLISECOND,{d '1970-01-01'}, getutcdate()))`
-
-Such key would be part of a composite primary key and would not cause collision. However, the last two would require inserting rows one by one. The first one would in fact generate different number for each row in the whole batch but there is no guarantee that they would be unique forever.  The last two options would likely be unique if we delayed each row insert by 1s or 1ms.
-
-**If a community has any good tips how to avoid using GUIDs please help.**
 
