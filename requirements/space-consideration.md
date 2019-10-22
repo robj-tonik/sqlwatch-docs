@@ -14,6 +14,14 @@ Although database size can be controlled by applying appropriate retention perio
 
 In some cases it may be required to disable some of the collectors, for example index histogram or even index statistics. 
 
+## Compression
+
+Page level table and index compression is recommended. Table compression can be applied by executing:
+
+`exec [dbo].[usp_sqlwatch_config_set_table_compression]`
+
+## Design Considerations that impact storage utilisation. 
+
 Some design considerations affect storage requirements, such as the use of 16 bytes long `sequential uniqueidentifier` data types in Primary Keys in order to allow data to be collected in central repository without collisions. Whilst  `smallint` IDENTITY fields would be preferable and with appropriate composite Primary Key would not cause duplication, we would still have to deal with repeating values in destination IDENTITY columns. 
 
 Another benefit of  `uniqueidentifier`  is the fact that Power BI is not able to create schema relations based on multiple columns. It requires one unique column. A work around would require building composite keys in the Power Query which could slow down the data load process and prevent query folding.
@@ -32,5 +40,5 @@ or even with greater capacity and precision \(8 bytes `bigint`, half the size of
 
 Such key would be part of a composite primary key and would not cause collision. However, the last two would require inserting rows one by one. The first one would in fact generate different number for each row in the whole batch but there is no guarantee that they would be unique forever.  The last two options would likely be unique if we delayed each row insert by 1s or 1ms.
 
-**If a community has any good tips, please help.**
+**If a community has any good tips how to avoid using GUIDs please help.**
 
