@@ -18,7 +18,7 @@ Page level table and index compression is recommended. Table compression can be 
 
 ## Design Considerations that impact storage utilisation. 
 
-Some design considerations affect storage requirements, such as the use of 16 bytes long `sequential uniqueidentifier` data types in Primary Keys in order to allow data to be collected in central repository without collisions. Whilst `smallint` IDENTITY fields would be preferable and with appropriate composite Primary Key would not cause duplication, the Power BI is not able to create schema relations based on multiple columns. It requires one unique column. A work around would require building composite keys in the Power Query which could slow down the data load process and prevent query folding \(as it was in version 1.x\).
+Some design considerations affect storage requirements, such as the use of 16 bytes long `sequential uniqueidentifier` data types in non-identifying Primary Keys in order to allow data to be collected in central repository without collisions. Whilst `smallint` IDENTITY fields would be preferable and with appropriate composite Primary Key would not cause duplication, the Power BI is not able to create schema relations based on multiple columns. It requires one unique column. A work around would require building composite keys in the Power Query which could slow down the data load process and prevent query folding \(as it was in version 1.x\).
 
 
 
