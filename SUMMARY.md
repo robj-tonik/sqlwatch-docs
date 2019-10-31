@@ -1,10 +1,51 @@
 # Table of contents
 
 * [Welcome](README.md)
-* [Concept](concept/README.md)
-  * [Architecture](concept/architecture.md)
+* [Introduction](concept/README.md)
+  * [Structure](concept/structure.md)
+* [Schema Design](schema-design.md)
 * [Requirements](requirements/README.md)
-  * [Storage requirements](requirements/storage-requirements.md)
+  * [Space consideration](requirements/space-consideration.md)
+* [Screenshots and Demo](screen-shots.md)
 * [Installation](installation/README.md)
-  * [Installing with dbatools](installation/dbatools.md)
+  * [Database components](installation/server-components/README.md)
+    * [Install with dbatools](installation/server-components/dbatools.md)
+    * [Install with SqlPackage](installation/server-components/installing-with-sqlpackage.exe.md)
+    * [Install with SSMS](installation/server-components/install-with-ssms.md)
+    * [Deploy from source code](installation/server-components/deploy-from-sources.md)
+  * [Client components](installation/client-components/README.md)
+    * [Power BI Desktop](installation/client-components/install-power-bi-desktop.md)
+  * [Integration Services components](installation/integration-services-components.md)
+* [Upgrade](upgrade/README.md)
+  * [Downgrade](upgrade/downgrade.md)
+* [Removal](removal.md)
+
+## Configuration
+
+* [Post-deployment configuration](configuration/data.md)
+* [User configuration](configuration/user-configuration/README.md)
+  * [SQL Server Configuration](configuration/user-configuration/sql-server-configuration.md)
+  * [PowerBI Report Parameters](configuration/user-configuration/powerbi-report-parameters.md)
+
+## Reference
+
+* [Data-Tier Application Package](reference/data-tier-application-package.md)
+
+## Known issues and limitations
+
+* [Collation conflict](known-issues-and-limitations/collation-conflict.md)
+* [Login failed error when running disk logger](known-issues-and-limitations/login-failed-error-when-running-disk-logger.md)
+* [Database drift](known-issues-and-limitations/database-drift.md)
+
+## Design Decision
+
+* [Data Types](design-decision/data-types/README.md)
+  * [Real Type](design-decision/data-types/real-type.md)
+* [Primary Keys](design-decision/primary-keys.md)
+* [Power BI Joins](design-decision/power-bi-joins.md)
+* [Data Compression](design-decision/data-compression.md)
+
+## User Manual
+
+* [How to](user-manual/how-to.md)
 
