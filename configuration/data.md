@@ -28,7 +28,7 @@ When scheduling the dtsx, the control package should be called from the agent jo
 
 A number of Extended Events Sessions are also deployed with SQLWATCH in a disabled state. This is because some DBAs will have their own XES sessions and we would not want to interfere without prior notice. However, certain functionality will not be available, for the full experience please enable SQWLATCH sessions.
 
-![](../.gitbook/assets/image%20%2821%29.png)
+![](../.gitbook/assets/image%20%2830%29.png)
 
 `ALTER EVENT SESSION SQLWATCH_blockers ON SERVER  
 STATE = start;  

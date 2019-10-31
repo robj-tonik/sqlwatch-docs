@@ -54,7 +54,7 @@ Please see installation section to find out how to install and configure the int
 
 To start collecting data from a remote instance, add a reference to the configuration table: `[dbo].[sqlwatch_config_sql_instance]`
 
-![](../../.gitbook/assets/image%20%2813%29.png)
+![](../../.gitbook/assets/image%20%2820%29.png)
 
 **sql\_instance and hostname**
 

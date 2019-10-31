@@ -37,3 +37,11 @@
 * [Login failed error when running disk logger](known-issues-and-limitations/login-failed-error-when-running-disk-logger.md)
 * [Database drift](known-issues-and-limitations/database-drift.md)
 
+## Design Decision
+
+* [Data Types](design-decision/data-types/README.md)
+  * [Real Type](design-decision/data-types/real-type.md)
+* [Primary Keys](design-decision/primary-keys.md)
+* [Power BI Joins](design-decision/power-bi-joins.md)
+* [Data Compression](design-decision/data-compression.md)
+
