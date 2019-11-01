@@ -13,6 +13,7 @@
     * [Install with SqlPackage](installation/server-components/installing-with-sqlpackage.exe.md)
     * [Install with SSMS](installation/server-components/install-with-ssms.md)
     * [Deploy from source code](installation/server-components/deploy-from-sources.md)
+    * [sp\_WhoIsActive](installation/server-components/sp_whoisactive.md)
   * [Client components](installation/client-components/README.md)
     * [Power BI Desktop](installation/client-components/install-power-bi-desktop.md)
   * [Integration Services components](installation/integration-services-components.md)
