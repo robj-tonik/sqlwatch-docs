@@ -41,6 +41,7 @@
 
 ## Design Decision
 
+* [Trend Tables](design-decision/trend-tables.md)
 * [Data Types](design-decision/data-types/README.md)
   * [Real Type](design-decision/data-types/real-type.md)
 * [Primary Keys](design-decision/primary-keys.md)
