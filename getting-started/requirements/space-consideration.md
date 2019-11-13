@@ -26,9 +26,9 @@ An example of a SQL Instance with only SQLWATCH database with standard retention
 
 #### Data and Index compression enabled \(49M\)
 
-![](../../.gitbook/assets/image%20%2851%29.png)
+![](../../.gitbook/assets/image%20%2856%29.png)
 
 #### Data and Index compression disabled \(181 MB\)
 
-![](../../.gitbook/assets/image%20%2814%29.png)
+![](../../.gitbook/assets/image%20%2816%29.png)
 

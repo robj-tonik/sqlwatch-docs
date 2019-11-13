@@ -37,10 +37,7 @@
   * [Checks](alerts-and-reports/alerts/checks.md)
   * [Actions](alerts-and-reports/alerts/actions.md)
 * [Reports](alerts-and-reports/reports/README.md)
-  * [Default reports](alerts-and-reports/reports/default-reports/README.md)
-    * [Failed Agent Jobs](alerts-and-reports/reports/default-reports/failed-agent-jobs.md)
-    * [Highly fragmented indexes](alerts-and-reports/reports/default-reports/highly-fragmented-indexes.md)
-    * [Blocking Chains](alerts-and-reports/reports/default-reports/blocking-chains.md)
+  * [Default reports](alerts-and-reports/reports/default-reports.md)
 
 ## Design Decision
 
