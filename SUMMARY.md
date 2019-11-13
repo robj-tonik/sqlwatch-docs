@@ -38,6 +38,7 @@
   * [Actions](alerts-and-reports/alerts/actions.md)
 * [Reports](alerts-and-reports/reports/README.md)
   * [Default reports](alerts-and-reports/reports/default-reports.md)
+* [How to](alerts-and-reports/how-to.md)
 
 ## Design Decision
 
