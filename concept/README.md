@@ -1,6 +1,6 @@
 # Concept
 
-SQLWATCH is a decentralised monitoring system with centralised reporting and optional, centralised repository. It relies on the SQL Server Agent to invoke local data collection.
+SQLWATCH is a decentralised SQL Server monitoring framework with centralised reporting and optional, centralised repository. It relies on the SQL Server Agent to invoke local data collection.
 
 Most enterprise monitoring solutions are centralised which means they often consist of a central repository and monitoring servers, where monitoring servers execute queries on the monitored SQL instance and send the results to the repository. Whilst this approach has a lot of benefits it also requires a set of dedicated monitoring infrastructure, servers, licensing, and network configuration to allow remote access to the monitored instances which can add complexity and increase the cost. Some solutions also require monitoring agent to be installed locally further increasing complexity. Any network outages between the monitoring server and monitored instance could cause gaps in the collected data. 
 
