@@ -9,6 +9,7 @@ SQLWATCH has been tested on the following SQL Server versions:
 * 2014
 * 2016
 * 2017 \(including docker and linux\*\)
+* 2019 
 
 > SQLWATCH works on docker and linux except the disk collector which relies on the Windows' WMI interface.
 
