@@ -14,17 +14,17 @@ Download the required release from our [GitHub Releases](https://github.com/marc
 
 Connect to the desired SQL Server, right click on Databases and select Deploy Data-Tier Application:
 
-![SSMS Deploy Data-tier Application](../../.gitbook/assets/deploy_datatier_application.png)
+![SSMS Deploy Data-tier Application](../../../.gitbook/assets/deploy_datatier_application.png)
 
 Find the SQLWATCH.dacpac you have downloaded and unzipped
 
-![DacPac deploy set source package path](../../.gitbook/assets/deploy_datatier_application_find_file.png)
+![DacPac deploy set source package path](../../../.gitbook/assets/deploy_datatier_application_find_file.png)
 
 Specify database name, default and recommended is SQLWATCH:
 
-![DacPac deploy set target database name](../../.gitbook/assets/deploy_datatier_application_set_name.png)
+![DacPac deploy set target database name](../../../.gitbook/assets/deploy_datatier_application_set_name.png)
 
 Click next for a summary screen and Next one more time to execute deployment. It can take a minute or two:
 
-![DacPac deploy summary screen](../../.gitbook/assets/deploy_datatier_application_deploy.png)
+![DacPac deploy summary screen](../../../.gitbook/assets/deploy_datatier_application_deploy.png)
 
