@@ -15,7 +15,7 @@ Some of the examples include:
 * Pushing data to log management systems \(Splunk, Graylog, Azure Monitor\)
 
 {% hint style="danger" %}
-**Due to the potential risk or executing any arbitrary code, the action table should not be writable by non-SA users.**
+**Due to the fact that actions can execute arbitrary code, the action table should not be writable by non-SA users.**
 {% endhint %}
 
 ### Definition
