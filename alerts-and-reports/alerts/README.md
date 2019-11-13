@@ -12,5 +12,5 @@ Actions are added to the queue to be processed by the queue processor \(another 
 
 Reports can be either scheduled \(i.e. daily or weekly reports\) or can be triggered by an action on the back of the check. 
 
-![](../../.gitbook/assets/image%20%2832%29.png)
+![](../../.gitbook/assets/image%20%2834%29.png)
 
