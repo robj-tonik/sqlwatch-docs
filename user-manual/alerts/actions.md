@@ -93,7 +93,7 @@ https://docs.sqlwatch.io
 Will result in the following notification:
 
 ```text
-Check: Average CPU utilisation (5m) ( CheckId: 9 )
+Check: Average CPU utilisation % over 5 minutes ( CheckId: 9 )
 
 Current status: OK
 Current value: 11.75
