@@ -1,5 +1,9 @@
 # PowerBI Report Parameters
 
+{% hint style="warning" %}
+Needs updating for version 2.2
+{% endhint %}
+
 ## SQL Instance
 
 Name of the SQL Instance to connect to. This could be a stand alone SQLWATCH instance or a central repository. 
