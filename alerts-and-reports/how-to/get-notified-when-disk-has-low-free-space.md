@@ -1,7 +1,3 @@
----
-description: An example of how to approach checks and notifications
----
-
 # Get notified when disk has low free space
 
 Suppose we want to be notified about disks running low on space. Say we want a warning when the disk is below 15% of free space and a critical notification when the free space drops below 5%
