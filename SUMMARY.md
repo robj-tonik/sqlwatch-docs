@@ -40,6 +40,7 @@
   * [Default reports](alerts-and-reports/reports/default-reports.md)
 * [How To](alerts-and-reports/how-to/README.md)
   * [Get notified when disk has low free space](alerts-and-reports/how-to/get-notified-when-disk-has-low-free-space.md)
+  * [Get notified about blocking chains](alerts-and-reports/how-to/get-notified-about-blocking-chains.md)
 
 ## Design Decision
 
