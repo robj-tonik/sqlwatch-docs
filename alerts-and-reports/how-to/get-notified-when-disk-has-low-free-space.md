@@ -61,9 +61,44 @@ where volume_name = ''C:\'''
            ,'<15'
            ,'<5'
            ,1)
+           
+--return id of the newly created check:
+declare @check_id smallint
+select @check_id = SCOPE_IDENTITY()
+select @check_id
 ```
 
+Once the check runs you will be able to see results in `[dbo].[sqlwatch_logger_check]` table.
 
+### Associate check with action
 
+Creating check on its own will not send an alert just yet. Actions are what makes things happen. We have to tell the check which action to trigger when it fails. Note in the previous script we have returned an ID of the newly created check `select SCOPE_IDENTITY()`. Suppose we have an existing action \(Id: 1\) that will send us an email. 
 
+![](../../.gitbook/assets/image%20%2851%29.png)
+
+We can associate our newly created check with action 1. For this, we need to insert a row in the association table: 
+
+```sql
+INSERT INTO [dbo].[sqlwatch_config_check_action]
+           ([sql_instance]
+           ,[check_id]
+           ,[action_id]
+           ,[action_every_failure]
+           ,[action_recovery]
+           ,[action_repeat_period_minutes]
+           ,[action_hourly_limit]
+           ,[action_template_id])
+     VALUES
+           (@@SERVERNAME
+           ,@check_id --check id from the previous query where we created a new check
+           ,1 --id of the action we want this check to trigger
+           ,0 --we do not want to be notified about every failure. just the first occurence
+           ,1 --we want to be notified when the disks returns back to normal
+           ,1440 --we want a reminder every day when the disk is below threshold
+           ,2 --do not send more than 2 notifications per hour
+           ,1 --assosiate with the default action template
+		   )
+```
+
+That's it. Now when the disk drops below the set thresholds we are going to get an email.
 
