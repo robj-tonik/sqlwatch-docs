@@ -26,7 +26,15 @@ Action definition is stored in table `[dbo].[sqlwatch_config_action]`
 
 #### Action executable
 
-Executable can either be a command `action_exec` or a report `action_report_id` but not both. The `action_exec` expects optional parameters `{SUBJECT}` and `{BODY}` which are defined by the template
+Executable can either be a command `action_exec` or a report `action_report_id` but not both. The `action_exec` expects optional parameters `{SUBJECT}` and `{BODY}` which are defined by the template.
+
+If action triggers a report, the content of the report will be embedded in the `{BODY}` and action associated with the given report called instead:
+
+```text
+                     check -> action -> report -> action
+```
+
+This way we can also call stand alone reports that are not triggered by checks, for example daily or weekly Server overview report or even business reports.
 
 Actions are executed by a PowerShell step in the SQL Server agent job and there are currently two types supported `T-SQL` and `PowerShell` which are invoked by either by `Invoke-SqlCmd` or `Invoke-Expression`
 
