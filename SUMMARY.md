@@ -55,9 +55,14 @@
 
 * [Data-Tier Application Package](reference/data-tier-application-package.md)
 
+## Hot Fixes <a id="fixes"></a>
+
+* [Untitled](fixes/untitled.md)
+
 ## Known issues and limitations
 
 * [Collation conflict](known-issues-and-limitations/collation-conflict.md)
 * [Login failed error when running disk logger](known-issues-and-limitations/login-failed-error-when-running-disk-logger.md)
 * [Database drift](known-issues-and-limitations/database-drift.md)
+* [Deadlock when creating database](known-issues-and-limitations/deadlock-when-creating-database.md)
 

@@ -1,3 +1,7 @@
+---
+description: An example of how to approach checks and notifications
+---
+
 # Get notified when disk has low free space
 
 Suppose we want to be notified about disks running low on space. Say we want a warning when the disk is below 15% of free space and a critical notification when the free space drops below 5%
@@ -74,7 +78,7 @@ Once the check runs you will be able to see results in `[dbo].[sqlwatch_logger_c
 
 Creating check on its own will not send an alert just yet. Actions are what makes things happen. We have to tell the check which action to trigger when it fails. Note in the previous script we have returned an ID of the newly created check `select SCOPE_IDENTITY()`. Suppose we have an existing action \(Id: 1\) that will send us an email. 
 
-![](../../.gitbook/assets/image%20%2851%29.png)
+![](../../.gitbook/assets/image%20%2854%29.png)
 
 We can associate our newly created check with action 1. For this, we need to insert a row in the association table: 
 

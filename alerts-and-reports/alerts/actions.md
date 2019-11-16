@@ -22,7 +22,7 @@ Some of the examples include:
 
 Action definition is stored in table `[dbo].[sqlwatch_config_action]`
 
-![\[dbo\].\[sqlwatch\_config\_action\]](../../.gitbook/assets/image%20%2844%29.png)
+![\[dbo\].\[sqlwatch\_config\_action\]](../../.gitbook/assets/image%20%2847%29.png)
 
 #### Action executable
 
@@ -35,10 +35,6 @@ Actions are executed by a PowerShell step in the SQL Server agent job and there 
 Actions support templates. For example, we may want a short description in the Pushover notification and more details in an email notification. 
 
 Templates are defined in `[dbo].[sqlwatch_config_check_action_template]`. Each status \(OK, WARNING and CRITICAL\) has its own subject and body templates which generate `{SUBJECT}` and `{BODY}` content required by the `action_exec`
-
-{% hint style="info" %}
-Although action template is mandatory, templates do not apply to actions that trigger reports. Reports have their own templates and styling.
-{% endhint %}
 
 To make it easier to build custom templates, a number of variables have been exposed for the end user:
 
@@ -58,7 +54,7 @@ To make it easier to build custom templates, a number of variables have been exp
 | {THRESHOLD\_WARNING} | Value of the warning threshold |
 | {THRESHOLD\_CRITICAL} | Value of the critical threshold |
 
-Default template for illustration:
+For example, if we have a simple check that does not call a report, the following plain text template:
 
 ```text
 Check: {CHECK_NAME} ( CheckId: {CHECK_ID} )
@@ -73,8 +69,8 @@ Previous change: {LAST_STATUS_CHANGE}
 SQL instance: {SQL_INSTANCE}
 Alert time: {CHECK_TIME}
 
-Warning threshold: {TRESHOLD_WARNING}
-Critical threshold: {TRESHOLD_CRITICAL}
+Warning threshold: {THRESHOLD_WARNING}
+Critical threshold: {THRESHOLD_CRITICAL}
 
 --- Check Description:
 
@@ -87,43 +83,60 @@ Critical threshold: {TRESHOLD_CRITICAL}
 ---
 
 Sent from SQLWATCH on host: {SQL_INSTANCE}
-https://docs.sqlwatch.io 
-```
-
-Will result in the following notification:
-
-```text
-Check: Average CPU utilisation % over 5 minutes ( CheckId: 9 )
-
-Current status: OK
-Current value: 11.75
-
-Previous value: 53.00
-Previous status: WARNING
-Previous change: 2019-11-02 22:25:06.090
-
-SQL instance: VM-QVZUXJGPDTMR
-Alert time: 2019-11-02 22:25:28.120
-
-Warning threshold: >=15
-Critical threshold: >=60
-
---- Description:
-
-In the last 5 minutes average cpu utilisation was high
-
---- Query:
-
-select avg([cntr_value_calculated])
-  from [SQLWATCH].[dbo].[vw_sqlwatch_report_fact_perf_os_performance_counters]
-  where counter_name = 'Processor Time %'
-  and report_time > dateadd(minute,-5,getutcdate())
-
----
-
-Email sent from SQLWATCH on host: VM-QVZUXJGPDTMR
 https://docs.sqlwatch.io
 ```
+
+Will result in the following content:
+
+![](../../.gitbook/assets/image%20%2832%29.png)
+
+In addition, actions that trigger reports have these variables exposed:
+
+| Variable | Description |
+| :--- | :--- |
+| {REPORT\_TITLE} | Report title |
+| {REPORT\_DESCRIPTION} | Report description |
+| {REPORT\_CONTENT} | Report content \(output from the report execution in HTML\) |
+
+For example, if we have a check that calls **Disk Utilisation Report**, the following action template \(note the `HTML` tags and the **Report Content** section\):
+
+```text
+<p>Check: {CHECK_NAME} ( CheckId: {CHECK_ID} )</p>
+
+<p>Current status:  {CHECK_STATUS}
+<br>Current value: {CHECK_VALUE}</p>
+
+<p>Previous value: {CHECK_LAST_VALUE}
+<br>Previous status: {CHECK_LAST_STATUS}
+<br>Previous change: {LAST_STATUS_CHANGE}</p>
+
+<p>SQL instance: {SQL_INSTANCE}
+<br>Alert time: {CHECK_TIME}</p>
+
+<p>Warning threshold: {THRESHOLD_WARNING}
+<br>Critical threshold: {THRESHOLD_CRITICAL}</p>
+
+<p>--- Check Description:</p>
+
+<p>{CHECK_DESCRIPTION}</p>
+
+<p>--- Check Query:</p>
+
+<p><pre style="background:#E0E0E0;padding:5px;"><code>{CHECK_QUERY}</code></pre></p>
+
+<p>--- Report Content:</p></p>
+
+<p><b>{REPORT_TITLE}</b></p>
+<p>{REPORT_DESCRIPTION}</p>
+<p>{REPORT_CONTENT}</p>
+
+<p>Sent from SQLWATCH on host: {SQL_INSTANCE}</p>
+<p><a href="https://docs.sqlwatch.io">https://docs.sqlwatch.io</a> </p>
+```
+
+Will generate the following report:
+
+![](../../.gitbook/assets/image%20%289%29.png)
 
 ### Attributes
 
