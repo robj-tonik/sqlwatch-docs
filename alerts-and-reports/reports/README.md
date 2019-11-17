@@ -2,7 +2,9 @@
 
 Reports is a standalone module that can be run on a set schedule, or triggered by an action. For example, we can have a daily "Status" report or even a business process saving generated file to a shared drive. 
 
-Actions can also trigger a report. For example, we can have a Check to check for space left on drives and send us a report when the thresholds are low.
+Actions can also trigger a report. For example, we can have a Check to check for space left on drives and send us a report when the thresholds are low. 
+
+> Reports are usually more complex and quite often require more resources to execute. By using the Check engine to trigger reports the performance impact is reduced to minimum.
 
 Reports are defined in table `[dbo].[sqlwatch_config_report]` and can be associated with actions in table `[dbo].[sqlwatch_config_report_action]` in a similar manner to how checks are associated with actions
 

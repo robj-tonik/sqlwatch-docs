@@ -1,6 +1,6 @@
 # Checks
 
-Checks are simple queries that must return only one value. For example, average CPU utilisation over the last 5 minutes:
+Checks are simple and very fast queries that return only one value. For example, average CPU utilisation over the last 5 minutes:
 
 ```sql
 select avg(cntr_value_calculated) 
@@ -21,7 +21,7 @@ Based on the above example, if the average CPU utilisation is below 60%, the che
 
 ![\[dbo\].\[sqlwatch\_logger\_check\]](../../.gitbook/assets/image%20%2845%29.png)
 
-If the check does not return an OK status, it can optionally trigger an action. Alternatively, if it returns from a WARNING or CRITICAL status, it can trigger a recovery message informing that that the problem has fixed itself. 
+If the check does not return an OK status, it can optionally trigger an action. Alternatively, if it comes back from a WARNING or a CRITICAL status, it can trigger a recovery message informing that that the problem has been resolved. 
 
 ### Association with Actions
 
