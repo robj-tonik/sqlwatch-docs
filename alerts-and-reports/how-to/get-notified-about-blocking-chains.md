@@ -61,5 +61,18 @@ Or we can re-run the procedure passing the ID of the report we want to update/re
 			,@report_action_id  = -1
 ```
 
+Delete Report
+
+To delete an existing report you can simply delete it from the table which will also delete any associations:
+
+```sql
+delete from [dbo].[sqlwatch_config_report]
+    where report_id = 1
+```
+
+{% hint style="info" %}
+Note that you cannot delete a report if an action is using it. You will first have to remove that action or update the `[action_report_id]` so it does not reference that report
+{% endhint %}
+
 
 

@@ -104,3 +104,16 @@ and report_time > dateadd(minute,-5,getutcdate())'
 	,@action_template_id = -1
 ```
 
+## Delete Check
+
+To delete an existing check, simply delete the record from the check table and cascade actions will ensure all associated records are also removed.
+
+```sql
+delete from [dbo].[sqlwatch_config_check]
+    where check_id = 1
+```
+
+{% hint style="info" %}
+Note that actions will not be deleted, only the check, logger history and action association but not the action itself. 
+{% endhint %}
+

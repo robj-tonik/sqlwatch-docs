@@ -49,5 +49,16 @@ update [dbo].[sqlwatch_config_action]
     where action_id = 1
 ```
 
+## Delete Action
 
+To delete existing action simply delete it from the actions table and all associated logger records will also be deleted:
+
+```sql
+delete from [dbo].[sqlwatch_config_action]
+    where action_id = 1
+```
+
+{% hint style="info" %}
+Note that you cannot delete an action if there are checks or reports using that action. Please first delete or disassociate checks and reports and then delete the action.
+{% endhint %}
 
