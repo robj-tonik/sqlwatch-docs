@@ -26,6 +26,13 @@
 			,@report_action_id  = -1
 ```
 
+Alternatively we can insert directly into the report table:
+
+```sql
+insert into [dbo].[sqlwatch_config_report]
+    values (...)
+```
+
 ## Modify existing report
 
 To modify existing report we can either update the report table:

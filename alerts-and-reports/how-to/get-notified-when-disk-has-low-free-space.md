@@ -63,6 +63,13 @@ and report_time > dateadd(minute,-5,getutcdate())'
 	,@action_template_id = 1
 ```
 
+Alternatively you can also insert directly into the action table:
+
+```sql
+insert into [dbo].[sqlwatch_config_check]
+values (...)
+```
+
 ## Modify existing check
 
 To modify an existing check we can either make a direct table update i.e:
