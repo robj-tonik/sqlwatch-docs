@@ -2,7 +2,7 @@
 description: An example of how to approach checks and notifications
 ---
 
-# Add or modify new check
+# Add or modify check
 
 ## Add a new check
 

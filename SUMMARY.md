@@ -39,8 +39,8 @@
 * [Reports](alerts-and-reports/reports/README.md)
   * [Default reports](alerts-and-reports/reports/default-reports.md)
 * [How To](alerts-and-reports/how-to/README.md)
-  * [Add or modify new check](alerts-and-reports/how-to/get-notified-when-disk-has-low-free-space.md)
-  * [Add new report](alerts-and-reports/how-to/get-notified-about-blocking-chains.md)
+  * [Add or modify check](alerts-and-reports/how-to/get-notified-when-disk-has-low-free-space.md)
+  * [Add or modify report](alerts-and-reports/how-to/get-notified-about-blocking-chains.md)
 
 ## Design Decision
 
