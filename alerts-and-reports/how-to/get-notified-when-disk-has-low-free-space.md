@@ -2,107 +2,98 @@
 description: An example of how to approach checks and notifications
 ---
 
-# Get notified when disk has low free space
+# Add or modify new check
 
-Suppose we want to be notified about disks running low on space. Say we want a warning when the disk is below 15% of free space and a critical notification when the free space drops below 5%
+## Add a new check
 
-Following the alerts concept, first we need a check to check how much space there is
-
-### Write the check query
-
-Checks are simple queries that must return exactly one value. In our case the query will be returning percentage of space free on disk C:\ 
+In this example we are adding a new check to check the average CPU utilisation in the last 5 minutes:
 
 ```sql
-select [free_space_percentage]
-from [dbo].[vw_sqlwatch_report_dim_os_volume]
-where volume_name = 'C:\'
+exec [dbo].[usp_sqlwatch_user_add_check]
+	/* Name of the check, this will appear in the {SUBJECT} parameter: */
+	@check_name = 'High CPU Utilistaion % in the last 5 minutes'
+	
+	/* description of the check: */
+	,@check_description = 'In the past 5 minutes, the average CPU utilistaion was higher than expected'
+	
+	/* SQL Query to perform the check. Must return single value only: */
+	,@check_query = 'select avg(cntr_value_calculated) 
+from dbo.vw_sqlwatch_report_fact_perf_os_performance_counters
+where counter_name = "Processor Time %"
+and report_time > dateadd(minute,-5,getutcdate())'
+
+	/* How often do we want this check to run.
+	   If set to NULL it will run every time the SQLWATCH-INTERNAL-CHECKS job runs: 
+		 Since we are checking for the CPU utilisation in the last 5 minutes, 
+		 we are going to run this every 5 minutes: */
+	,@check_frequency_minutes = 5
+	
+	/* Value for warning. If the check returns value greater than this, 
+		 it will raise a WARNING status */
+	,@check_threshold_warning = '>60'
+
+	/* Value for critical. If the check returns value greater than this, 
+		 it will raise a CRITICAL status */
+	,@check_threshold_critical = '>80'
+
+	/* Whether the check should be enabled or disabled */
+	,@check_enabled = 1
+
+	/* Assosiate with an existing action */
+	,@check_action_id = 1
+
+	/* Whether to action every failure or just on first failure.
+		 = 0 : When the check fails it will triggen an action on the first failure. 
+				   It will not trigger another action until it recovers back to OK and failes again
+		 = 1 : When the check fails it will trigger an action, and it will be triggering
+					 an action every time the value changes and is not OK. It will NOT trigger
+					 another action if the value does not change. We can use "reminders" for that */
+	,@action_every_failure = 0
+
+	/* Whether to send a recovery message when check comes back to OK */
+	,@action_recovery = 1
+
+	/* Whether to send a "reminder" if the check stays in non OK status */
+	,@action_repeat_period_minutes = NULL
+
+	/* Limit of messages per hour, for this check and action only: */
+	,@action_hourly_limit = 10
+
+	/* Assosiate action with an existing action template */
+	,@action_template_id = 1
 ```
 
-This data will be stored in `[check_query]`
+## Modify existing check
 
-### Define thresholds 
-
-Think about realistic thresholds. Alerts are to trigger you to do an action rather than just be deleted and forgotten about. If you set thresholds too high you will get the impression that you may have "plenty of time to deal with it" and may forget about it. If you set thresholds to low you may not have enough time to deal with the issue before the server goes down.
-
-For our check we have assumed WARNING below 15% and CRITICAL alert if the space drops below 5%
-
-This data will be stored in `[check_threshold_warning]` and `[check_threshold_critical]`
-
-### Define check frequency 
-
-Checks are triggered by an agent job that runs every minute. Some checks may run every minute, however in our case we are going to run this check every 15 minutes.
-
-This will be stored in `[check_frequency_minutes]`
-
-### Name and Description
-
-Finally, give this check a name and description. This is what you will see on the alert and the email so make sure it is descriptive and meaningful to you.
-
-These values will be in `[check_name]` and `[check_description]` 
-
-### Insert into checks table 
-
-Once we have all the information we can insert into the check table
+To modify an existing check we can either make a direct table update i.e:
 
 ```sql
-INSERT INTO [dbo].[sqlwatch_config_check]
-           ([sql_instance]
-           ,[check_name]
-           ,[check_description]
-           ,[check_query]
-           ,[check_frequency_minutes]
-           ,[check_threshold_warning]
-           ,[check_threshold_critical]
-           ,[check_enabled])
-     VALUES
-           (@@SERVERNAME
-           ,'Disk Free %: C:\'
-           ,'Disk C:\ has low free space. It may run out of space soon, depending on the growth.'
-           ,'select [free_space_percentage]
-from [dbo].[vw_sqlwatch_report_dim_os_volume]
-where volume_name = ''C:\'''
-           ,15
-           ,'<15'
-           ,'<5'
-           ,1)
-           
---return id of the newly created check:
-declare @check_id smallint
-select @check_id = SCOPE_IDENTITY()
-select @check_id
+update [dbo].[sqlwatch_config_check]
+    set [check_frequency_minutes] = 10
+    where check_id = 1
 ```
 
-Once the check runs you will be able to see results in `[dbo].[sqlwatch_logger_check]` table.
-
-### Associate check with action
-
-Creating check on its own will not send an alert just yet. Actions are what makes things happen. We have to tell the check which action to trigger when it fails. Note in the previous script we have returned an ID of the newly created check `select SCOPE_IDENTITY()`. Suppose we have an existing action \(Id: 1\) that will send us an email. 
-
-![](../../.gitbook/assets/image%20%2854%29.png)
-
-We can associate our newly created check with action 1. For this, we need to insert a row in the association table: 
+Or we can re-run the procedure with a check\_id to modify and all values will be replaced:
 
 ```sql
-INSERT INTO [dbo].[sqlwatch_config_check_action]
-           ([sql_instance]
-           ,[check_id]
-           ,[action_id]
-           ,[action_every_failure]
-           ,[action_recovery]
-           ,[action_repeat_period_minutes]
-           ,[action_hourly_limit]
-           ,[action_template_id])
-     VALUES
-           (@@SERVERNAME
-           ,@check_id --check id from the previous query where we created a new check
-           ,1 --id of the action we want this check to trigger
-           ,0 --we do not want to be notified about every failure. just the first occurence
-           ,1 --we want to be notified when the disks returns back to normal
-           ,1440 --we want a reminder every day when the disk is below threshold
-           ,2 --do not send more than 2 notifications per hour
-           ,1 --assosiate with the default action template
-		   )
+exec [dbo].[usp_sqlwatch_user_add_check]
+	--to modify existin check, pass ID here:
+	 @check_id = 1
+	,@check_name = 'High CPU Utilistaion % in the last 5 minutes'
+	,@check_description = 'In the past 5 minutes, the average CPU utilistaion was higher than expected'
+	,@check_query = 'select avg(cntr_value_calculated) 
+from dbo.vw_sqlwatch_report_fact_perf_os_performance_counters
+where counter_name = ''Processor Time %''
+and report_time > dateadd(minute,-5,getutcdate())'
+	,@check_frequency_minutes = 5
+	,@check_threshold_warning = '>60'
+	,@check_threshold_critical = '>80'
+	,@check_enabled = 1
+	,@check_action_id = -2
+	,@action_every_failure = 0
+	,@action_recovery = 1
+	,@action_repeat_period_minutes = NULL
+	,@action_hourly_limit = 10
+	,@action_template_id = -1
 ```
-
-That's it. Now when the disk drops below the set thresholds we are going to get an email.
 
