@@ -5,6 +5,8 @@
 The target platform for SQLWATCH is SQL Server 2012\*. It has been tested on the following platforms:
 
 {% hint style="success" %}
+#### SQL Server Standard and Enterprise
+
 * ~~2008 R2 SP3 \(read below\)~~
 * **2012**
 * **2014**
@@ -14,18 +16,29 @@ The target platform for SQLWATCH is SQL Server 2012\*. It has been tested on the
 {% endhint %}
 
 {% hint style="success" %}
-**SQL Server Express** editions are supported with **Windows Task Scheduler** in place for SQL Agent. Since version 2.2 Power Shell templates can be generated to help create all relevant tasks and schedules:
+**SQL Server Express**
+
+Express Edition is supported with **Windows Task Scheduler** in place for SQL Agent. Since version 2.2 Power Shell templates can be generated to help create all relevant tasks and schedules:
 
 `exec [dbo].[usp_sqlwatch_config_set_default_agent_jobs] @print_WTS_command = 1`
 {% endhint %}
 
 {% hint style="success" %}
-* Any VM with the above SQL Server version will work in the Cloud \(Azure, AWS, GCP\)
-* Azure SQL Managed Instances should work according to Microsoft as they are 100% compatible with the above.
+#### Virtual Machines in the Cloud
+
+Any Virtual Machine with the above SQL Server version will work in the Cloud \(Azure, AWS, GCP\)
 {% endhint %}
 
 {% hint style="info" %}
-* SQL Server on **Docker** and **Linux** are supported except the disk collector which relies on the Windows' WMI interface. Currently there is no equivalent for Linux implemented.
+#### Azure SQL Managed Instances 
+
+According to Microsoft they are 100% compatible with the above. **However, this has not been tested.**
+{% endhint %}
+
+{% hint style="info" %}
+**Docker** and **Linux** 
+
+Both are supported except the disk collector which relies on the Windows' WMI interface. Currently there is no equivalent for Linux implemented.
 {% endhint %}
 
 {% hint style="warning" %}
