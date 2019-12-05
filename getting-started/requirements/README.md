@@ -16,7 +16,7 @@
 {% hint style="success" %}
 **SQL Server Express**
 
-Express Edition is supported with **Windows Task Scheduler** in place for SQL Agent. Since version 2.2 Power Shell templates can be generated to help create all relevant tasks and schedules:
+Express Edition is supported with **Windows Task Scheduler** in place for SQL Agent. Since version 2.2 Power Shell templates can be generated to help create all relevant tasks and schedules. Task creation tested on **Windows Server 2012** and **Windows Server 2016**.
 
 `exec [dbo].[usp_sqlwatch_config_set_default_agent_jobs] @print_WTS_command = 1`
 {% endhint %}
