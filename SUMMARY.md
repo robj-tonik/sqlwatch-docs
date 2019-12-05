@@ -45,6 +45,7 @@
 
 ## Design Decision
 
+* [Relations](design-decision/relations.md)
 * [Trend Tables](design-decision/trend-tables.md)
 * [Data Types](design-decision/data-types/README.md)
   * [Real Type](design-decision/data-types/real-type.md)
@@ -66,4 +67,5 @@
 * [Login failed error when running disk logger](known-issues-and-limitations/login-failed-error-when-running-disk-logger.md)
 * [Database drift](known-issues-and-limitations/database-drift.md)
 * [Deadlock when creating database](known-issues-and-limitations/deadlock-when-creating-database.md)
+* [Power BI Load Errors](known-issues-and-limitations/power-bi-load-errors.md)
 
