@@ -84,6 +84,16 @@ In large and busy environments or in environments where space is a concern the f
 
 Furthermore, retention can be decreased to 1 or 2 days, or central repository deployed to offload data from remote instances.
 
+### Data Compression
+
+The following procedures will enable apply PAGE level compression:
+
+`--table:  
+exec [dbo].[usp_sqlwatch_config_set_table_compression]  
+  
+--index:  
+exec [dbo].[usp_sqlwatch_config_set_index_compression]`
+
 ## Permissions
 
 ### SQL Server permissions required for deployment
