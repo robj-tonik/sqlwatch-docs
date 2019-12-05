@@ -2,22 +2,31 @@
 
 ## SQL Server requirements
 
-The target platform for SQLWATCH is SQL Server 2012\*. It has been tested on the following SQL Server versions:
+The target platform for SQLWATCH is SQL Server 2012\*. It has been tested on the following platforms:
 
 {% hint style="success" %}
 * ~~2008 R2 SP3 \(read below\)~~
-* 2012
-* 2014
-* 2016
-* 2017 \(including docker and linux\*\)
-* 2019
+* **2012**
+* **2014**
+* **2016**
+* **2017**
+* **2019**
+{% endhint %}
+
+{% hint style="success" %}
+**SQL Server Express** editions are supported with **Windows Task Scheduler** in place for SQL Agent. Since version 2.2 Power Shell templates can be generated to help create all relevant tasks and schedules:
+
+`exec [dbo].[usp_sqlwatch_config_set_default_agent_jobs] @print_WTS_command = 1`
+{% endhint %}
+
+{% hint style="success" %}
+* Any VM with the above SQL Server version will work in the Cloud \(Azure, AWS, GCP\)
+* Azure SQL Managed Instances should work according to Microsoft as they are 100% compatible with the above.
 {% endhint %}
 
 {% hint style="info" %}
-* SQL Server on docker and Linux are supported except the disk collector which relies on the Windows' WMI interface. Currently there is no equivalent in bash implemented.
+* SQL Server on **Docker** and **Linux** are supported except the disk collector which relies on the Windows' WMI interface. Currently there is no equivalent for Linux implemented.
 {% endhint %}
-
-Azure SQL are not supported as there is no Agent to invoke data collection. Theoretically, data collection would be possible via SQLCMD triggered from the Windows Task Scheduler or another Standard Edition instance in case of the Express edition and, for example, Azure Runbook in case of Azure SQL but this has not been tested.
 
 {% hint style="warning" %}
 #### SQL Server 2008 R2
@@ -31,6 +40,10 @@ Whilst not officially supported, SQLWATCH will work on SQL2008 R2 SP3 with few s
 * Procedure `[dbo].[usp_sqlwatch_internal_get_last_snapshot_time_in_tables]` will need to be modified and the final `with result sets` removed. _This procedure is only used by the central repository which is targeted at SSIS 2012:_
 * View `vw_sqlwatch_sys_databases` will need to be modified and join on `left join sys.dm_hadr_availability_replica_states hars` removed. This will force removal of the remaining joins and essentially reverting back issue \#108: [https://github.com/marcingminski/sqlwatch/issues/108](https://github.com/marcingminski/sqlwatch/issues/108)
 * Depending on what PowerShell modules are installed in addition to SQL Server, some PowerShell agent steps may not work. As a workaround, These can be triggered from Windows Task Scheduler. _See installation on the Express Edition_.
+{% endhint %}
+
+{% hint style="danger" %}
+Azure SQL is currently not supported.
 {% endhint %}
 
 ## Integration Services requirements
