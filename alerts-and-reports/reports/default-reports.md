@@ -16,13 +16,13 @@ This report is triggered from the check, when there are any failed agent jobs in
 
 This report show list of indexes where fragmentation is over 30%
 
-![](../../.gitbook/assets/image%20%2822%29.png)
+![](../../.gitbook/assets/image%20%2823%29.png)
 
 ## Blocking Chains
 
 This report is triggered by a check and contains all blocking chains in the last 5 minutes. Optimised for mobile devices.
 
-![](../../.gitbook/assets/image%20%2813%29.png)
+![](../../.gitbook/assets/image%20%2814%29.png)
 
 ## Disk Utilisation
 

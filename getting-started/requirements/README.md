@@ -69,11 +69,20 @@ It is expected that the Power BI Desktop dashboard will be run on a client PC. T
 
 In version 2.1 schema has been redesigned and storage utilisation reduced by approx 60-80%. In addition, it is also possible and advisable to enable page compression on SQLWATCH data tables and indexes reducing utilisation by further 25-50%. The amount of space used by SQLWATCH depends on the retention period, number of databases on the server and the workload. As a guidance, below is the size of SQLWATCH in my test environment, with data compression enabled, after 30 days of use:
 
-![Top tables after 30 days of use](../../.gitbook/assets/image%20%2844%29.png)
+![Top tables after 30 days of use](../../.gitbook/assets/image%20%2812%29.png)
 
 {% hint style="info" %}
 Appropriate index maintenance must in place in order to make sure table size is not being bloated over time.
 {% endhint %}
+
+### Large Environments
+
+In large and busy environments or in environments where space is a concern the following collectors can be disabled to limit the amount of data collected:
+
+* Index Statistics and Histograms 
+* Long Queries
+
+Furthermore, retention can be decreased to 1 or 2 days, or central repository deployed to offload data from remote instances.
 
 ## Permissions
 

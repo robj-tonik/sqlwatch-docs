@@ -6,5 +6,5 @@ The exception are action and check tables, where we had to "detach" logger table
 
 In this instance, cascade actions are handled by triggers:
 
-![](../.gitbook/assets/image%20%2830%29.png)
+![](../.gitbook/assets/image%20%2831%29.png)
 
