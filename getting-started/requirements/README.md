@@ -30,7 +30,7 @@ Any Virtual Machine with the above SQL Server version will work in the Cloud \(A
 {% hint style="info" %}
 #### Azure SQL Managed Instances 
 
-According to Microsoft they are 100% compatible with the above. **However, this has not been tested.**
+According to Microsoft they are 100% compatible with the traditional installation. **However, this has not been tested.**
 {% endhint %}
 
 {% hint style="info" %}
