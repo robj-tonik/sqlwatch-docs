@@ -8,8 +8,7 @@
 
 ## Getting Started
 
-* [Requirements](getting-started/requirements/README.md)
-  * [Space consideration](getting-started/requirements/space-consideration.md)
+* [Requirements](getting-started/requirements.md)
 * [Installation](getting-started/installation/README.md)
   * [Database components](getting-started/installation/server-components/README.md)
     * [Install with dbatools](getting-started/installation/server-components/dbatools.md)
