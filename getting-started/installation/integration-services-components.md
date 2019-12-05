@@ -4,7 +4,7 @@ SQLWATCH Central Repostory requires Integration Services package in order to col
 
 The Project consists of two packages: Control Package and the Worker Package. 
 
-![](../../.gitbook/assets/image%20%2851%29.png)
+![](../../.gitbook/assets/image%20%2853%29.png)
 
 ## Package Configuration
 
@@ -35,7 +35,7 @@ SQL User to access central repository or blank for Windows authentication.
 
 The worker package `import_remote_data.dtsx` is responsible for the actual data collection from remote instances into the central repository. 
 
-![](../../.gitbook/assets/image%20%2867%29.png)
+![](../../.gitbook/assets/image%20%2869%29.png)
 
 #### Parameters
 
