@@ -2,8 +2,6 @@
 
 ## SQL Server requirements
 
-The target platform for SQLWATCH is SQL Server 2012\*. It has been tested on the following platforms:
-
 {% hint style="success" %}
 #### SQL Server Standard and Enterprise
 
