@@ -12,13 +12,13 @@ In a Real data type this would be:
 
 Quick conversion to Mega Bytes reveals negligible loss of accuracy:
 
-![](../../.gitbook/assets/image%20%2812%29.png)
+![](../../.gitbook/assets/image%20%2813%29.png)
 
-![](../../.gitbook/assets/image%20%2872%29.png)
+![](../../.gitbook/assets/image%20%2873%29.png)
 
 Taking it one step further and simulating even larger number:
 
-![](../../.gitbook/assets/image%20%2857%29.png)
+![](../../.gitbook/assets/image%20%2858%29.png)
 
 ![](../../.gitbook/assets/image%20%284%29.png)
 
@@ -26,5 +26,5 @@ And even bigger 2705311284433920 bytes:
 
 ![](../../.gitbook/assets/image%20%287%29.png)
 
-![](../../.gitbook/assets/image%20%2833%29.png)
+![](../../.gitbook/assets/image%20%2834%29.png)
 
