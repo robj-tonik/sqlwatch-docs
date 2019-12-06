@@ -90,11 +90,7 @@ In order to retrieve data from the SQLWATCH database the following permissions a
 | :--- | :--- |
 | `SELECT` | PowerBI Dashboard utilises Direct Queries to read from SQL views and explicit permissions to tables are not required by the PowerBI users. |
 
-### SQL Server permissions required for data collection
-
-{% hint style="warning" %}
-**Not defined**. It is expected that collection will run under local SQL Agent account which will have `sa` rights. However, **this is not a requirement** I just have not got minimum requirements defined for the collectors yet.
-{% endhint %}
+### 
 
 ### SQL Server permissions required for Central Repository
 

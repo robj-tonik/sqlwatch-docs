@@ -5,27 +5,36 @@
 
 ## SQLWATCH Database
 
-* [Requirements](sqlwatch-database/requirements.md)
-* [Performance Overhead](sqlwatch-database/performance-overhead.md)
-* [Storage Utilisation](sqlwatch-database/storage-utilisation.md)
+* [Requirements](sqlwatch-database/requirements/README.md)
+  * [Permissions](sqlwatch-database/requirements/permissions.md)
+  * [Performance Overhead](sqlwatch-database/requirements/performance-overhead.md)
+  * [Storage Utilisation](sqlwatch-database/requirements/storage-utilisation.md)
+* [Installation](sqlwatch-database/installation/README.md)
+  * [Install with dbatools](sqlwatch-database/installation/dbatools.md)
+  * [Install with SqlPackage](sqlwatch-database/installation/installing-with-sqlpackage.exe.md)
+  * [Install with SSMS](sqlwatch-database/installation/install-with-ssms.md)
+  * [Deploy from source code](sqlwatch-database/installation/deploy-from-sources.md)
+* [Configuration](sqlwatch-database/configuration-1.md)
 
 ## Central Repository
 
-* [Requirements](central-repository/requirements.md)
+* [Requirements](central-repository/requirements/README.md)
+  * [Permissions](central-repository/requirements/permissions.md)
+* [Installation](central-repository/installation.md)
+* [Configuration](central-repository/configuration.md)
 
-## Dashboard
+## Power BI Dashboard <a id="dashboard"></a>
 
-* [Requirements](dashboard/requirements.md)
+* [Requirements](dashboard/requirements/README.md)
+  * [Permissions](dashboard/requirements/permissions.md)
+* [Installation](dashboard/installation.md)
+* [Configuration](dashboard/configuration.md)
 
 ## Getting Started
 
 * [Minimum Requirements](getting-started/requirements.md)
 * [Installation](getting-started/installation/README.md)
   * [Database components](getting-started/installation/server-components/README.md)
-    * [Install with dbatools](getting-started/installation/server-components/dbatools.md)
-    * [Install with SqlPackage](getting-started/installation/server-components/installing-with-sqlpackage.exe.md)
-    * [Install with SSMS](getting-started/installation/server-components/install-with-ssms.md)
-    * [Deploy from source code](getting-started/installation/server-components/deploy-from-sources.md)
     * [sp\_WhoIsActive](getting-started/installation/server-components/sp_whoisactive.md)
   * [Client components](getting-started/installation/client-components/README.md)
     * [Power BI Desktop](getting-started/installation/client-components/install-power-bi-desktop.md)

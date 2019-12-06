@@ -10,7 +10,7 @@ Automation and integration with [dbatools ](https://dbatools.io)makes it easy to
 
 ## Components
 
-There are 3 three main components:
+There are 3 three main and independent components:
 
 ### SQLWATCH Database
 
