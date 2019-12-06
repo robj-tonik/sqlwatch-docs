@@ -2,7 +2,18 @@
 
 * [Welcome](README.md)
 * [Concept](concept.md)
-* [Screenshots and Demo](screen-shots.md)
+
+## SQLWATCH Database
+
+* [Requirements](sqlwatch-database/requirements.md)
+
+## Central Repository
+
+* [Requirements](central-repository/requirements.md)
+
+## Dashboard
+
+* [Requirements](dashboard/requirements.md)
 
 ## Getting Started
 
