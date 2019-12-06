@@ -1,7 +1,7 @@
 # Welcome
 
-{% hint style="info" %}
-Version 2.2 is currently in BETA. The documentation is being written and may change at any time.
+{% hint style="warning" %}
+Version 2.2 is currently in BETA. **The documentation is being written and may change at any time and be incomplete.**
 {% endhint %}
 
 This is SQLWATCH documentation portal. 

@@ -19,6 +19,20 @@
   * [Removal](sqlwatch-database/installation/removal.md)
   * [Downgrade](sqlwatch-database/installation/downgrade.md)
 * [Configuration](sqlwatch-database/configuration-1.md)
+* [Known Issues](sqlwatch-database/known-issues/README.md)
+  * [Collation conflict](sqlwatch-database/known-issues/collation-conflict.md)
+  * [Database drift](sqlwatch-database/known-issues/database-drift.md)
+  * [Login failed error when running disk logger](sqlwatch-database/known-issues/login-failed-error-when-running-disk-logger.md)
+  * [Deadlock when creating database](sqlwatch-database/known-issues/deadlock-when-creating-database.md)
+* [Notifications](notifications/README.md)
+  * [Checks](notifications/checks.md)
+  * [Actions](notifications/actions.md)
+  * [Reports](notifications/reports.md)
+  * [How To](notifications/how-to/README.md)
+    * [Add or modify check](notifications/how-to/get-notified-when-disk-has-low-free-space.md)
+    * [Add or modify action](notifications/how-to/add-or-modify-action.md)
+    * [Add or modify report](notifications/how-to/get-notified-about-blocking-chains.md)
+* [Large Environments](large-environments.md)
 
 ## Central Repository
 
@@ -27,7 +41,9 @@
 * [Installation](central-repository/installation/README.md)
   * [Removal](central-repository/installation/removal.md)
   * [Upgrade](central-repository/installation/upgrade.md)
-* [Configuration](central-repository/configuration.md)
+* [Configuration](central-repository/configuration/README.md)
+  * [Define remote instances for collection](central-repository/configuration/define-remote-instances-for-collection.md)
+* [Known Issues](central-repository/known-issues.md)
 
 ## Power BI Dashboard <a id="dashboard"></a>
 
@@ -35,32 +51,8 @@
   * [Permissions](dashboard/requirements/permissions.md)
 * [Installation](dashboard/installation.md)
 * [Configuration](dashboard/configuration.md)
-
-## Getting Started
-
-* [Minimum Requirements](getting-started/requirements.md)
-* [Installation](getting-started/installation/README.md)
-  * [Database components](getting-started/installation/server-components.md)
-  * [Integration Services components](getting-started/installation/integration-services-components.md)
-  * [Post-deployment configuration](getting-started/installation/data.md)
-
-## Configuration
-
-* [User configuration](configuration/user-configuration/README.md)
-  * [SQL Server Configuration](configuration/user-configuration/sql-server-configuration.md)
-  * [PowerBI Report Parameters](configuration/user-configuration/powerbi-report-parameters.md)
-
-## Alerts and Reports
-
-* [Alerts](alerts-and-reports/alerts/README.md)
-  * [Checks](alerts-and-reports/alerts/checks.md)
-  * [Actions](alerts-and-reports/alerts/actions.md)
-* [Reports](alerts-and-reports/reports/README.md)
-  * [Default reports](alerts-and-reports/reports/default-reports.md)
-* [How To](alerts-and-reports/how-to/README.md)
-  * [Add or modify check](alerts-and-reports/how-to/get-notified-when-disk-has-low-free-space.md)
-  * [Add or modify action](alerts-and-reports/how-to/add-or-modify-action.md)
-  * [Add or modify report](alerts-and-reports/how-to/get-notified-about-blocking-chains.md)
+* [Known Issues](dashboard/known-issues/README.md)
+  * [Power BI Load Errors](dashboard/known-issues/power-bi-load-errors.md)
 
 ## Design Decision
 
@@ -77,14 +69,4 @@
 * [Data-Tier Application Package](reference/data-tier-application-package.md)
 
 ## Hot Fixes <a id="fixes"></a>
-
-* [Untitled](fixes/untitled.md)
-
-## Known issues and limitations
-
-* [Collation conflict](known-issues-and-limitations/collation-conflict.md)
-* [Login failed error when running disk logger](known-issues-and-limitations/login-failed-error-when-running-disk-logger.md)
-* [Database drift](known-issues-and-limitations/database-drift.md)
-* [Deadlock when creating database](known-issues-and-limitations/deadlock-when-creating-database.md)
-* [Power BI Load Errors](known-issues-and-limitations/power-bi-load-errors.md)
 
