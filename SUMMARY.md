@@ -15,17 +15,18 @@
   * [Install with SSMS](sqlwatch-database/installation/install-with-ssms.md)
   * [Deploy from source code](sqlwatch-database/installation/deploy-from-sources.md)
   * [Optional Components](sqlwatch-database/installation/optional-components.md)
-* [Upgrade](sqlwatch-database/upgrade.md)
-* [Removal](sqlwatch-database/removal.md)
+  * [Upgrade](sqlwatch-database/installation/upgrade.md)
+  * [Removal](sqlwatch-database/installation/removal.md)
+  * [Downgrade](sqlwatch-database/installation/downgrade.md)
 * [Configuration](sqlwatch-database/configuration-1.md)
 
 ## Central Repository
 
 * [Requirements](central-repository/requirements/README.md)
   * [Permissions](central-repository/requirements/permissions.md)
-* [Installation](central-repository/installation.md)
-* [Upgrade](central-repository/upgrade.md)
-* [Removal](central-repository/removal.md)
+* [Installation](central-repository/installation/README.md)
+  * [Removal](central-repository/installation/removal.md)
+  * [Upgrade](central-repository/installation/upgrade.md)
 * [Configuration](central-repository/configuration.md)
 
 ## Power BI Dashboard <a id="dashboard"></a>
@@ -40,12 +41,8 @@
 * [Minimum Requirements](getting-started/requirements.md)
 * [Installation](getting-started/installation/README.md)
   * [Database components](getting-started/installation/server-components.md)
-  * [Client components](getting-started/installation/client-components.md)
   * [Integration Services components](getting-started/installation/integration-services-components.md)
   * [Post-deployment configuration](getting-started/installation/data.md)
-* [Upgrade](getting-started/upgrade/README.md)
-  * [Downgrade](getting-started/upgrade/downgrade.md)
-* [Removal](getting-started/removal.md)
 
 ## Configuration
 
