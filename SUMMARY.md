@@ -7,6 +7,7 @@
 
 * [Requirements](sqlwatch-database/requirements.md)
 * [Performance Overhead](sqlwatch-database/performance-overhead.md)
+* [Storage Utilisation](sqlwatch-database/storage-utilisation.md)
 
 ## Central Repository
 
