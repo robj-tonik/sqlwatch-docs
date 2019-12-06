@@ -14,6 +14,9 @@
   * [Install with SqlPackage](sqlwatch-database/installation/installing-with-sqlpackage.exe.md)
   * [Install with SSMS](sqlwatch-database/installation/install-with-ssms.md)
   * [Deploy from source code](sqlwatch-database/installation/deploy-from-sources.md)
+  * [Optional Components](sqlwatch-database/installation/optional-components.md)
+* [Upgrade](sqlwatch-database/upgrade.md)
+* [Removal](sqlwatch-database/removal.md)
 * [Configuration](sqlwatch-database/configuration-1.md)
 
 ## Central Repository
@@ -21,6 +24,8 @@
 * [Requirements](central-repository/requirements/README.md)
   * [Permissions](central-repository/requirements/permissions.md)
 * [Installation](central-repository/installation.md)
+* [Upgrade](central-repository/upgrade.md)
+* [Removal](central-repository/removal.md)
 * [Configuration](central-repository/configuration.md)
 
 ## Power BI Dashboard <a id="dashboard"></a>
@@ -34,10 +39,8 @@
 
 * [Minimum Requirements](getting-started/requirements.md)
 * [Installation](getting-started/installation/README.md)
-  * [Database components](getting-started/installation/server-components/README.md)
-    * [sp\_WhoIsActive](getting-started/installation/server-components/sp_whoisactive.md)
-  * [Client components](getting-started/installation/client-components/README.md)
-    * [Power BI Desktop](getting-started/installation/client-components/install-power-bi-desktop.md)
+  * [Database components](getting-started/installation/server-components.md)
+  * [Client components](getting-started/installation/client-components.md)
   * [Integration Services components](getting-started/installation/integration-services-components.md)
   * [Post-deployment configuration](getting-started/installation/data.md)
 * [Upgrade](getting-started/upgrade/README.md)

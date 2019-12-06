@@ -12,7 +12,7 @@ Actions are added to the queue to be processed by the queue processor \(another 
 
 Reports can be either scheduled \(i.e. daily or weekly reports\) or can be triggered by an action on the back of the check. 
 
-![](../../.gitbook/assets/image%20%2849%29.png)
+![](../../.gitbook/assets/image%20%2850%29.png)
 
 ## Example Notifications
 
@@ -20,5 +20,5 @@ Notifications and alerts triggered on the back of a check deliver simple but inf
 
 ### Pushover
 
-![](../../.gitbook/assets/image%20%2847%29.png)
+![](../../.gitbook/assets/image%20%2848%29.png)
 

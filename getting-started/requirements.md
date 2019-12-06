@@ -69,32 +69,5 @@ exec [dbo].[usp_sqlwatch_config_set_table_compression]
 --index:  
 exec [dbo].[usp_sqlwatch_config_set_index_compression]`
 
-## User Permissions
 
-### SQL Server permissions required for deployment
-
-In order to install SQLWATCH the following minimum permissions are required:
-
-| Permission | reason |
-| :--- | :--- |
-| `dbcreator` | Create SQLWATCH database as part of the deployment process |
-| `GRANT CREATE ...` | Object creation during the deployment.  |
-| `SQLAgentUserRole` | Create SQL Agent jobs |
-| `Windows Administrator` | Only when using Windows Scheduled Tasks instead of SQL Agent for collector invocation. Windows Administrator permission will be require in order to create and schedule tasks to run in the background. |
-
-### SQL Server permissions required for reports
-
-In order to retrieve data from the SQLWATCH database the following permissions are required:
-
-| Permission | Description |
-| :--- | :--- |
-| `SELECT` | PowerBI Dashboard utilises Direct Queries to read from SQL views and explicit permissions to tables are not required by the PowerBI users. |
-
-### 
-
-### SQL Server permissions required for Central Repository
-
-Central Repository requires `SELECT` permission on the remote instances as well as `EXECUTE` permission on the following stored procedures in the central repository:
-
-`dbo.usp_sqlwatch_internal_get_last_snapshot_time_in_tables`
 

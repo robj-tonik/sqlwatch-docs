@@ -4,7 +4,7 @@
 
 A normal Windows User account is enough to open and refresh the Power BI reports. An Administrative access will be required to Install Power BI Desktop. Please refer to the Power BI installation guide:
 
-[https://powerbi.microsoft.com/en-us/desktop/](https://powerbi.microsoft.com/en-us/desktop/)
+{% embed url="https://powerbi.microsoft.com/en-us/desktop/" %}
 
 ### SQL Server permissions required for reports
 

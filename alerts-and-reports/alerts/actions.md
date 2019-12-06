@@ -22,7 +22,7 @@ Some of the examples include:
 
 Action definition is stored in table `[dbo].[sqlwatch_config_action]`
 
-![\[dbo\].\[sqlwatch\_config\_action\]](../../.gitbook/assets/image%20%2852%29.png)
+![\[dbo\].\[sqlwatch\_config\_action\]](../../.gitbook/assets/image%20%2853%29.png)
 
 #### Action executable
 

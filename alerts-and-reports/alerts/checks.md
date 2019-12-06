@@ -11,7 +11,7 @@ and report_time > dateadd(minute,-5,getutcdate())
 
 The result of the check are compared to the given thresholds:
 
-![](../../.gitbook/assets/image%20%2842%29.png)
+![](../../.gitbook/assets/image%20%2843%29.png)
 
 There are three possible status, based on the comparison:
 
@@ -19,7 +19,7 @@ There are three possible status, based on the comparison:
 
 Based on the above example, if the average CPU utilisation is below 60%, the check will return an OK status. If it is above 60% but below 80%, it will return WARNING and if over 80%, it fill return CRITICAL status. Check outputs and statuses are logged in a table:
 
-![\[dbo\].\[sqlwatch\_logger\_check\]](../../.gitbook/assets/image%20%2850%29.png)
+![\[dbo\].\[sqlwatch\_logger\_check\]](../../.gitbook/assets/image%20%2851%29.png)
 
 If the check does not return an OK status, it can optionally trigger an action. Alternatively, if it comes back from a WARNING or a CRITICAL status, it can trigger a recovery message informing that that the problem has been resolved. 
 

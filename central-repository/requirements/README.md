@@ -18,3 +18,5 @@ SQL Server Integration Services 2012 and higher
 
 The Central Repository database does not have to be hosted on the SSIS server, in other words, there can be dedicated SQL Server hosting the central repository and one or more dedicated SSIS Servers.
 
+{% embed url="https://docs.microsoft.com/en-us/sql/integration-services/sql-server-integration-services" %}
+
