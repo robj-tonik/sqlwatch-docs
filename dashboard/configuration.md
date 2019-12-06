@@ -10,7 +10,11 @@ You will need to change the parameters supplied with the Dashboard on the first 
 This section needs updating as lots of params changed in 2.2
 {% endhint %}
 
-To open Parameters window, when on the main Dashboard page \(not in Power Query\), navigate to Home -&gt; Edit Queries -&gt; Edit Parameters. There is no need to go into the Query Editor to edit or modify queries
+To open Parameters window, when on the main Dashboard page \(not in Power Query\), navigate to Home -&gt; Edit Queries -&gt; Edit Parameters. 
+
+{% hint style="info" %}
+There is no need to go into the Query Editor to edit or modify queries or data sources. Everything is handled through the below parameters.
+{% endhint %}
 
 ![](../.gitbook/assets/image%20%2842%29.png)
 
