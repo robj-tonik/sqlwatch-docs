@@ -42,9 +42,9 @@ Both are supported except the disk collector which relies on the Windows' WMI in
 {% endhint %}
 
 {% hint style="warning" %}
-#### SQL Server 2008 R2
+#### SQL Server 2008 R2 SP3
 
-Whilst not officially supported, SQLWATCH will work on SQL2008 R2 SP3 with few small modifications.
+Whilst not officially supported, SQLWATCH will work on **SQL Server 2008 R2 SP3** with few small modifications.
 
 1. Download source code from GitHub and open in Visual Studio with Data Tools. Since Visual Studio 2019, Data Tools are available as an extension. [https://docs.microsoft.com/en-us/sql/ssdt/download-sql-server-data-tools-ssdt](https://docs.microsoft.com/en-us/sql/ssdt/download-sql-server-data-tools-ssdt)
 2. Once the below changes have been implemented, right click on the Project, go to Properties and change Target Platform to SQL 2008. Project should build successfully.
@@ -53,6 +53,8 @@ Whilst not officially supported, SQLWATCH will work on SQL2008 R2 SP3 with few s
 * Procedure `[dbo].[usp_sqlwatch_internal_get_last_snapshot_time_in_tables]` will need to be modified and the final `with result sets` removed. _This procedure is only used by the central repository which is targeted at SSIS 2012:_
 * View `vw_sqlwatch_sys_databases` will need to be modified and join on `left join sys.dm_hadr_availability_replica_states hars` removed. This will force removal of the remaining joins and essentially reverting back issue \#108: [https://github.com/marcingminski/sqlwatch/issues/108](https://github.com/marcingminski/sqlwatch/issues/108)
 * Depending on what PowerShell modules are installed in addition to SQL Server, some PowerShell agent steps may not work. As a workaround, These can be triggered from Windows Task Scheduler. _See installation on the Express Edition_.
+
+**SQL Server 2008 R2 prior to SP3 are not supported**
 {% endhint %}
 
 {% hint style="danger" %}

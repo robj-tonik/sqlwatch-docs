@@ -8,5 +8,19 @@ SQLWATCH has been designed to address some these challenges, especially in a sma
 
 Automation and integration with [dbatools ](https://dbatools.io)makes it easy to keep decentralised deployment in sync and up to date.
 
+## Components
 
+There are 3 three main components:
+
+### SQLWATCH Database
+
+Database is deployed locally and utilises local agent jobs for data collection. Alternatively, collection can be invoked via local Windows Task Scheduler. Currently no remote collection is possible.
+
+### PowerBI Dashboard
+
+The dashboard connects to SQLWATCH database and visualises collected data.
+
+### Central Repository
+
+Optional central repository can be installed to collect data from remote SQLWATCH instances. Note that the repository only loads data from remote SQLWATCH databases into the central database to enable reporting across multiple servers and to enable shorted retention on remote instances. 
 

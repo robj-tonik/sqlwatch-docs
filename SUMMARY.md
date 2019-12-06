@@ -1,9 +1,7 @@
 # Table of contents
 
 * [Welcome](README.md)
-* [Concept](concept/README.md)
-  * [Structure](concept/structure.md)
-  * [Schema Design](concept/schema-design.md)
+* [Concept](concept.md)
 * [Screenshots and Demo](screen-shots.md)
 
 ## Getting Started
