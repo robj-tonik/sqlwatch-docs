@@ -6,6 +6,7 @@
 ## SQLWATCH Database
 
 * [Requirements](sqlwatch-database/requirements.md)
+* [Performance Overhead](sqlwatch-database/performance-overhead.md)
 
 ## Central Repository
 
