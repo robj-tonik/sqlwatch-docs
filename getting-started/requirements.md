@@ -7,7 +7,7 @@
 {% hint style="success" %}
 #### SQL Server Standard and Enterprise
 
-* **2008 R2 SP3** _\(read below\)_
+* **2008 R2 SP3** _\(details below\)_
 * **2012**
 * **2014**
 * **2016**
