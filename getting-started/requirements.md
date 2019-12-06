@@ -6,29 +6,17 @@
 
 
 
-{% hint style="success" %}
 \*\*\*\*
-{% endhint %}
 
-{% hint style="success" %}
 #### 
-{% endhint %}
 
-{% hint style="info" %}
 #### 
-{% endhint %}
 
-{% hint style="info" %}
 \*\*\*\*
-{% endhint %}
 
-{% hint style="warning" %}
 #### 
-{% endhint %}
 
-{% hint style="danger" %}
 
-{% endhint %}
 
 ### Integration Services
 

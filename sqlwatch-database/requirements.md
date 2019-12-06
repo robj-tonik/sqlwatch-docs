@@ -1,5 +1,5 @@
 ---
-description: Minimum requirements for SQL Server Engine
+description: Minimum requirements for the SQLWATCH data collector and SQL Server Engine
 ---
 
 # Requirements
