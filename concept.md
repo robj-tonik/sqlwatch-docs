@@ -14,7 +14,7 @@ There are 3 three main components:
 
 ### SQLWATCH Database
 
-Database is deployed locally and utilises local agent jobs for data collection. Alternatively, collection can be invoked via local Windows Task Scheduler. Currently no remote collection is possible.
+Database is deployed locally and utilises local agent jobs for data collection. Alternatively, collection can be invoked via local Windows Task Scheduler. **Currently no remote collection is possible**.
 
 ### PowerBI Dashboard
 
