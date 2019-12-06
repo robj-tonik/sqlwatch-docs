@@ -8,6 +8,8 @@ SQLWATCH has been designed to address some these challenges, especially in a sma
 
 Automation and integration with [dbatools ](https://dbatools.io)makes it easy to keep decentralised deployment in sync and up to date.
 
+{% embed url="https://dbatools.io/" %}
+
 ## Components
 
 There are 3 three main and independent components:

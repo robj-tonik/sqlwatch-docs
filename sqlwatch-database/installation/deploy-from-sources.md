@@ -4,11 +4,13 @@
 
 SQLWATCH is developed in Visual Studio Community. You can obtain a free copy of the Community edition on [Microsoft website](https://visualstudio.microsoft.com/vs/express/). You can also use Visual Studio Standard or Professional.
 
+{% embed url="https://visualstudio.microsoft.com/vs/express/" %}
+
 ## Prerequisites
 
 1. Visual Studio with SQL Server Data Tools \(SSDT\) installed. 
 
-> You can learn more about SSDT on the [Microsoft website](https://docs.microsoft.com/en-us/sql/ssdt/download-sql-server-data-tools-ssdt)
+{% embed url="https://docs.microsoft.com/en-us/sql/ssdt/download-sql-server-data-tools-ssdt" %}
 
 ## Installation
 

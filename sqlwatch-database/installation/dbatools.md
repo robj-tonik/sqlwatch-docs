@@ -8,6 +8,8 @@
 
 1. [dbatools ](https://dbatools.io/)must be installed on the computer running installation and the computer must have internet access in order to download SQLWATCH release. Best practice is to run installation from a client PC and not on the server.
 
+{% embed url="https://dbatools.io/" %}
+
 ## Stable releases
 
 SQLWATCH can be installed across multiple-servers using dbatools:

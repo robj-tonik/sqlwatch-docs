@@ -6,9 +6,9 @@
 
 `C:\Program Files (x86)\Microsoft SQL Server\140\DAC\bin\SqlPackage.exe`
 
-> Where 140 is the version of installed Management Studio. Your version and path may be different to the example above.
+> 140 is the version of installed Management Studio. Your version and path may be different to the example above.
 
-You can read more about `SqlPackage.exe` in [Microsoft Docs](https://docs.microsoft.com/en-us/sql/tools/sqlpackage)
+{% embed url="https://docs.microsoft.com/en-us/sql/tools/sqlpackage" %}
 
 ## Prerequisites
 

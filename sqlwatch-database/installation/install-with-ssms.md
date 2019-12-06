@@ -2,7 +2,9 @@
 
 ## Introduction
 
-SQL Server Management Studio \(SSMS\) is a free, integrated development environment \(IDE\) for SQL Server. You can read more about SSMS in [Microsoft Docs](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms)
+SQL Server Management Studio \(SSMS\) is a free, integrated development environment \(IDE\) for SQL Server.
+
+{% embed url="https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms" %}
 
 ## Prerequisites
 
