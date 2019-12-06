@@ -73,7 +73,7 @@ If you encounter any problems opening SQLWATCH dashboard please make sure you ha
 
 ## Performance Overhead
 
-SQLWATCH is designed with minimum overhead. It utilises [**SQL Server Extended Events**](https://docs.microsoft.com/en-us/sql/relational-databases/extended-events/extended-events) where possible and Dynamic Management Views \(DMV\) collectors that run every minute by default.
+SQLWATCH is designed with minimum overhead. It utilises [**SQL Server Extended Events \(XES\)**](https://docs.microsoft.com/en-us/sql/relational-databases/extended-events/extended-events) where possible and [**Dynamic Management Views \(DMV\)**](https://docs.microsoft.com/en-us/sql/relational-databases/system-dynamic-management-views/system-dynamic-management-views) collectors that run every minute by default.
 
 > SQL Server The Extended Events architecture enables users to collect as much or as little data as is necessary to troubleshoot or identify a performance problem. Extended Events is configurable, and it scales very well.
 
@@ -133,7 +133,9 @@ In order to retrieve data from the SQLWATCH database the following permissions a
 
 ### SQL Server permissions required for data collection
 
+{% hint style="warning" %}
 **Not defined**. It is expected that collection will run under local SQL Agent account which will have `sa` rights. However, **this is not a requirement** I just have not got minimum requirements defined for the collectors yet.
+{% endhint %}
 
 ### SQL Server permissions required for Central Repository
 
