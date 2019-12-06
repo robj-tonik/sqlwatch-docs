@@ -1,6 +1,8 @@
-# Requirements
+# Minimum Requirements
 
-## SQL Server requirements
+## System Requirements
+
+### SQL Server
 
 {% hint style="success" %}
 #### SQL Server Standard and Enterprise
@@ -57,11 +59,11 @@ Whilst not officially supported, SQLWATCH will work on SQL2008 R2 SP3 with few s
 Azure SQL is currently not supported.
 {% endhint %}
 
-## Integration Services requirements
+### Integration Services
 
 Data collection into central repository requires SQL Server Integration Service 2012 or higher. 
 
-## Workstation requirements
+### Workstation
 
 It is expected that the Power BI Desktop dashboard will be run on a client PC. There are no specific requirements for SQLWATCH apart from Power BI Desktop requirements which can be found on the [Power BI website](https://docs.microsoft.com/en-us/power-bi/desktop-get-the-desktop#minimum-requirements).  
 
@@ -69,7 +71,17 @@ It is expected that the Power BI Desktop dashboard will be run on a client PC. T
 If you encounter any problems opening SQLWATCH dashboard please make sure you have the most recent version of PowerBI
 {% endhint %}
 
-## Storage utilisation
+## Performance Overhead
+
+SQLWATCH is designed with minimum overhead. It utilises [**SQL Server Extended Events**](https://docs.microsoft.com/en-us/sql/relational-databases/extended-events/extended-events) where possible and Dynamic Management Views \(DMV\) collectors that run every minute by default.
+
+> SQL Server The Extended Events architecture enables users to collect as much or as little data as is necessary to troubleshoot or identify a performance problem. Extended Events is configurable, and it scales very well.
+
+{% hint style="info" %}
+I have not observed nor has any performance overhead or increased CPU utilisation been reported to me. If you notice anything suspicious please feed back ASAP.
+{% endhint %}
+
+## Storage Utilisation
 
 In version 2.1 schema has been redesigned and storage utilisation reduced by approx 60-80%. In addition, it is also possible and advisable to enable page compression on SQLWATCH data tables and indexes reducing utilisation by further 25-50%. The amount of space used by SQLWATCH depends on the retention period, number of databases on the server and the workload. As a guidance, below is the size of SQLWATCH in my test environment, with data compression enabled, after 30 days of use:
 

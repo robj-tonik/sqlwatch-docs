@@ -8,7 +8,7 @@
 
 ## Getting Started
 
-* [Requirements](getting-started/requirements.md)
+* [Minimum Requirements](getting-started/requirements.md)
 * [Installation](getting-started/installation/README.md)
   * [Database components](getting-started/installation/server-components/README.md)
     * [Install with dbatools](getting-started/installation/server-components/dbatools.md)
