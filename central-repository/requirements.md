@@ -6,7 +6,7 @@ description: Minimum requirements to host Central Repository
 
 ## SQL Database
 
-Central Repository is just another SQLWATCH database and the same requirements apply. Although any existing SQLWATCH database can become central repository at any point in time it is recommended to have it on a dedicated host due to the potential workload and performance overhead as it will be downloading data from the remote SQLWATCH  databases into the central location.
+Central Repository is just another SQLWATCH database, the same requirements and principles apply. Although any existing SQLWATCH database can become central repository at any point in time it is recommended to have it on a dedicated host due to the potential workload and performance overhead as it will be downloading data from the remote SQLWATCH  databases into the central location.
 
 ## SQL Integration Service \(SSIS\)
 
