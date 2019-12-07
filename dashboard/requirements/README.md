@@ -14,7 +14,9 @@ There are no custom requirements for Visuals or any other components. Neither R 
 
 ### Workstation
 
-Power BI Desktop is very efficient in handling data and displaying visuals. It is also very efficient in data storage making files very small. 90% of Power BI Performance will depend on your local desktop. A decent PC, with 8GB and i5 Processor is recommended but of course - the better CPU, disk and RAM the better and faster.
+Power BI Desktop is very efficient in handling data and displaying visuals. It is also very efficient in data storage making files very small. 90% of Power BI Performance will depend on your local desktop. I have used SQLWATCH dashboard comfortably on a Surface 4 with i7 and 8GB RAM.
+
+{% embed url="https://docs.microsoft.com/en-us/power-bi/desktop-get-the-desktop\#minimum-requirements" %}
 
 ## Power BI Service
 

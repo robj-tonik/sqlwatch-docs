@@ -53,6 +53,7 @@
 * [Configuration](dashboard/configuration.md)
 * [Known Issues](dashboard/known-issues/README.md)
   * [Power BI Load Errors](dashboard/known-issues/power-bi-load-errors.md)
+* [Performance](dashboard/performance.md)
 
 ## Design Decision
 

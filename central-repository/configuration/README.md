@@ -4,7 +4,7 @@
 
 To configure SSIS package, navigate to the Project in the **Integration Services Catalogs**:
 
-![](../../.gitbook/assets/image%20%2861%29.png)
+![](../../.gitbook/assets/image%20%2874%29.png)
 
 {% hint style="info" %}
 You can apply configuration to the project, or individual packages. The project will contain the collection of all configuration options from child packages.
@@ -16,7 +16,7 @@ You can apply configuration to the project, or individual packages. The project 
 
 The control package `control_import.dtsx` is responsible for orchestrating multi-threaded data collection and execution of the Worker Package `import_remote_data.dtsx`
 
-![](../../.gitbook/assets/image%20%2844%29.png)
+![](../../.gitbook/assets/image%20%2854%29.png)
 
 #### Parameters
 
@@ -39,7 +39,7 @@ SQL User to access central repository or blank for Windows authentication.
 
 The worker package `import_remote_data.dtsx` is responsible for the actual data collection from remote instances into the central repository. 
 
-![](../../.gitbook/assets/image%20%2878%29.png)
+![](../../.gitbook/assets/image%20%2891%29.png)
 
 #### Parameters
 
