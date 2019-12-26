@@ -42,25 +42,25 @@ Reduce the Report Time Window parameter to download less data.
 
 If you are investigating last 60 minutes of production performance issues, perhaps you do not need to see last 24 hours worth of Agent Job history, index statistics or disk utilisation. Make sure you are setting report parameters correctly to limit what is being downloaded to Power BI
 
-![](../.gitbook/assets/image%20%2828%29.png)
+![](../.gitbook/assets/image%20%2829%29.png)
 
 ### Baselines
 
 Baselines are fantastic way to compare same periods of time in an offset. For example, Same hour but yesterday, same day but last week etc. However, they also require more data to be downloaded. Only enable baselines if you have to.
 
-![](../.gitbook/assets/image%20%2832%29.png)
+![](../.gitbook/assets/image%20%2833%29.png)
 
 ### Generic Performance Analyser
 
 The Generic Performance Analyser tab shows all Performance Counters without aggregation. It's purpose is to drill down into details. Only enable it when you are debugging performance issues. 
 
-![](../.gitbook/assets/image%20%2862%29.png)
+![](../.gitbook/assets/image%20%2865%29.png)
 
 ### Filter Central Repository
 
 When using Central Repository, data for all servers is downloaded into Power BI. If you are investigating specific SQL Instance, you can apply filter so only data for this instance is downloaded:
 
-![](../.gitbook/assets/image%20%2847%29.png)
+![](../.gitbook/assets/image%20%2848%29.png)
 
 ## 
 

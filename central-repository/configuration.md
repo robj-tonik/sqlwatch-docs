@@ -27,7 +27,7 @@ exec [dbo].[usp_sqlwatch_user_repository_add_remote_instance]
     @rmtpassword --password for the linked server authentication, leave NULL for default Windows Auth or when using SSIS,
 ```
 
-![\[dbo\].\[sqlwatch\_config\_sql\_instance\]](../.gitbook/assets/image%20%2858%29.png)
+![\[dbo\].\[sqlwatch\_config\_sql\_instance\]](../.gitbook/assets/image%20%2859%29.png)
 
 ## Linked Server
 
@@ -72,10 +72,20 @@ exec [dbo].[usp_sqlwatch_config_set_repository_agent_jobs]
 
 This will result in the following jobs to be created:
 
-1. A single enqueuing job that will create list of remote objects to pull data from and control how often they are pulled. 
-2. A single or multiple import jobs, depending on the `@threads` variable that will process the import queue. These jobs can run every 1 minute.
+1. A single enqueuing job that creates list of remote objects to pull data from \(`[dbo].[sqlwatch_meta_repository_import_queue]`\) and umltimately controls how often they are processed. 
+2. A single or multiple import jobs, depending on the `@threads` variable that will process the import queue. These jobs can run every 1 minute and will process any outstanding items in the queue table. 
 
 ![Example of @threads = 8](../.gitbook/assets/image%20%283%29.png)
+
+### Execution
+
+Each thread registers itself in the threads table `[dbo].[sqlwatch_meta_repository_import_thread]` which contains the name of the SQL Agent Job currently running the thread
+
+![\[dbo\].\[sqlwatch\_meta\_repository\_import\_thread\]](../.gitbook/assets/image%20%2881%29.png)
+
+Import status of each object can be seen in the `[dbo].[sqlwatch_meta_repository_import_status]` table:
+
+![](../.gitbook/assets/image%20%2863%29.png)
 
 ## SSIS
 
@@ -83,7 +93,7 @@ This will result in the following jobs to be created:
 
 To configure SSIS package, navigate to the Project in the **Integration Services Catalogs**:
 
-![](../.gitbook/assets/image%20%2876%29.png)
+![](../.gitbook/assets/image%20%2880%29.png)
 
 {% hint style="info" %}
 You can apply configuration to the project, or individual packages. The project will contain the collection of all configuration options from child packages.
@@ -95,7 +105,7 @@ You can apply configuration to the project, or individual packages. The project 
 
 The control package `control_import.dtsx` is responsible for orchestrating multi-threaded data collection and execution of the Worker Package `import_remote_data.dtsx`
 
-![](../.gitbook/assets/image%20%2855%29.png)
+![](../.gitbook/assets/image%20%2856%29.png)
 
 #### Parameters
 
@@ -118,7 +128,7 @@ SQL User to access central repository or blank for Windows authentication.
 
 The worker package `import_remote_data.dtsx` is responsible for the actual data collection from remote instances into the central repository. 
 
-![](../.gitbook/assets/image%20%2893%29.png)
+![](../.gitbook/assets/image%20%2898%29.png)
 
 #### Parameters
 

@@ -6,7 +6,7 @@ SQLWATCH has been developed in Visual Studio which is based on [Declarative Depl
 
 Summarising, to upgrade SQLWATCH database one simply follows the installation process. The only exception is when using SSMS, there is an explicit Upgrade Option in the database context:
 
-![](../../.gitbook/assets/image%20%2854%29.png)
+![](../../.gitbook/assets/image%20%2855%29.png)
 
 ## Challenges
 
