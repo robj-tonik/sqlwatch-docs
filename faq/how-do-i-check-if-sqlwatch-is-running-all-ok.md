@@ -9,7 +9,7 @@ select *
 from [dbo].[vw_sqlwatch_report_dim_check]
 where 
 	(
-		-- get all critical and warning check:
+		-- get all critical and warning checks:
 		(last_check_status in ('CRITICAL','WARNING') or last_check_status is null)
 		-- but exclude performance and backup checks:
 		and check_id not in (
