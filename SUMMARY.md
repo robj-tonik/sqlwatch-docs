@@ -73,5 +73,6 @@
 
 ## FAQ
 
-* [How do I check if SQLWATCH is running all OK?](faq/how-do-i-check-if-sqlwatch-is-running-all-ok.md)
+* [How do I check if SQLWATCH is running OK?](faq/how-do-i-check-if-sqlwatch-is-running-all-ok.md)
+* [I am not seeing any data in Power BI](faq/i-am-not-seeing-any-data-in-power-bi.md)
 

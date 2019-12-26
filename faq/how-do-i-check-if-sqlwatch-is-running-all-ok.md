@@ -1,4 +1,4 @@
-# How do I check if SQLWATCH is running all OK?
+# How do I check if SQLWATCH is running OK?
 
 SQLWATCH contains many components that are driving by the SQL Agent Jobs. Any failures should manifest in these jobs failing. SQLWATCH also contains a number of built-in "self-check" that ensure smooth execution. You can list any problematic checks with this query.
 
