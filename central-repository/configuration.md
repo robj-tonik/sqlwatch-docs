@@ -7,7 +7,7 @@ Central Repository can download data from remote instances in two ways:
 
 Both methods do a FULL load of the relatively small `meta*` tables and delta loads of the `logger*` tables that contain the actual performance data. Whilst SSIS is a performance optimised engine and may perform faster, there is no noticable performance advantage of using either method and both perform in a similar way when pulling remote data. The advantage of using Linked Server is that it does not require SSIS and can be run on a SQL Server Express Edition with jobs invoked via Windows Scheduled Tasks instead of the SQL Agent. 
 
-> Linked Server approach is build programatically and therefore easier to develop and maintain. It contains a number of improvements over the SSIS method, such as message logging to a table and force full load of the header tables if missing keys are detected.
+> Linked Server approach is build programatically and therefore easier to develop and maintain. It contains a number of improvements over the SSIS method, such as message logging to a table, automatic table import without the explicit declaration \(SSIS requires meta data refresh which slows down the development\) and force full load of the header tables if missing keys are detected.
 
 ## Add Remote Instance
 
