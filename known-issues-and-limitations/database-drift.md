@@ -8,7 +8,7 @@ Database has drifted from its registered data-tier application
 
 When SQLWATCH is deployed, it registers itself as data-tier application, which adds a record in `msdb.dbo.sysdac_instances`. 
 
-![](../.gitbook/assets/image%20%2840%29.png)
+![](../.gitbook/assets/image%20%2841%29.png)
 
 This is userful to identify currently installed version of SQLWATCH.
 
@@ -20,7 +20,7 @@ To work around this issue, we have to unregister data-tier application. This can
 
 Right click database -&gt; Tasks -&gt; Delete Data-Tier Application
 
-![](../.gitbook/assets/image%20%2871%29.png)
+![](../.gitbook/assets/image%20%2872%29.png)
 
 Alternatively, you can use T-SQL to achieve the same:
 
