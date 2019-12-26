@@ -16,8 +16,8 @@ where
 			-43,-37,-36,-34,-33,-32,-30,-29,-28,-25,-24,-23,-22,
 			-20,-19,-18,-17
 		)
-	-- and list any checks that are failing:
-	or last_check_status = 'CHECK ERROR'
+	-- and list any checks that are failing or never run:
+	or (last_check_status = 'CHECK ERROR' or last_check_status is null)
 )
 ```
 
