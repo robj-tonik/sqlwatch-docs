@@ -55,6 +55,8 @@ exec [dbo].[usp_sqlwatch_user_repository_create_linked_server]
     @rmtpassword --optional password for the remote instance (same for all) or blank to use default windows auth
 ```
 
+{% embed url="https://docs.microsoft.com/en-us/sql/relational-databases/linked-servers/create-linked-servers-sql-server-database-engine" %}
+
 ### Create remote collector jobs
 
 Linked Server collector can be multithreaded and there is no limit on the number of threads providing the performance of the central repository is adequate. The linked server approach creates a table based queue of all remote objects to import with the required dependency \(i.e. meta tables first, the logger tables\) in `[dbo].[sqlwatch_meta_repository_import_queue]`
