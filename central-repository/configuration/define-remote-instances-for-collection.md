@@ -2,7 +2,7 @@
 
 To start collecting data from a remote instance, add a reference to the configuration table: `[dbo].[sqlwatch_config_sql_instance]`
 
-![](../../.gitbook/assets/image%20%2855%29.png)
+![](../../.gitbook/assets/image%20%2856%29.png)
 
 **sql\_instance and hostname**
 

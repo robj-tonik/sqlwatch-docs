@@ -1,10 +1,87 @@
 # Configuration
 
-## Package Configuration
+Central Repository can download data from remote instances in two ways:
+
+1. SSIS
+2. Linked Server
+
+Both methods do a FULL load of relatively small meta tables and delta loads of the logger tables that contain the actual performance data. Whilst SSIS is a performance optimised engine and may perform faster, there is no noticable performance advantage of using either method and both perform in a similar way when pulling remote data. The advantage of using Linked Server is that it does not require SSIS and can be run on a SQL Server Express Edition with jobs invoked via Windows Scheduled Tasks instead of the SQL Agent.  
+
+## Add Remote Instance
+
+In order for the central respository to know which remote instances to collect data from, they must be defined in `[dbo].[sqlwatch_config_sql_instance]`
+
+ This can be achieved by directly inserting data into the table, or by executing a stored procedure:
+
+```sql
+exec [dbo].[usp_sqlwatch_user_repository_add_remote_instance]
+    @sql_instance --sql instance name,
+    @hostname --hostname, if different to the @sql_instance, for example this could be in IP if no DNS records present,
+    @sql_port --non standard sql port, leave NULL for the default 1433,
+    @sqlwatch_database_name --name of the SQLWATCH database,
+    @environment --name of the environment (DEV,PROD,QA or anything) - this is for the user convinience,
+    @linked_server_name --name of the linked server, a new LS will be created if not exists. If you prefer to use existing LS, leave this blank and manually update [linked_server_name] in [dbo].[sqlwatch_config_sql_instance]. If you are using SSIS, leave NULL. 
+    @rmtuser --username for the linked server authentication, leave NULL for default Windows Auth or when using SSIS,
+    @rmtpassword --password for the linked server authentication, leave NULL for default Windows Auth or when using SSIS,
+```
+
+![\[dbo\].\[sqlwatch\_config\_sql\_instance\]](../../.gitbook/assets/image%20%2858%29.png)
+
+## Linked Server
+
+In order to invoke collection via Linked Server, linked server to SQLWATCH database on each monitored instance must be created. This can be achieved by executing stored procedure `dbo.usp_sqlwatch_user_repository_create_linked_server`
+
+###  Create all required linked servers
+
+The procedure can create all required linked servers as per the  `[linked_server_name]` column in `[dbo].[sqlwatch_config_sql_instance]` table:
+
+```sql
+exec [dbo].[usp_sqlwatch_user_repository_create_linked_server]
+    @rmtuser --optional user name for the remote instance (same for all) or blank to use default windows auth,
+    @rmtpassword --optional password for the remote instance (same for all) or blank to use default windows auth
+```
+
+### Create specific linked server
+
+Alternatively, it can create only specific linked server. This is the default bahavior when executing `[dbo].[usp_sqlwatch_user_repository_add_remote_instance]`
+
+```sql
+exec [dbo].[usp_sqlwatch_user_repository_create_linked_server]
+    @sql_instance --name of the existing sql instance in [dbo].[sqlwatch_config_sql_instance],
+    @linked_server --optional, name of the required linked server. if blank a default name will be created,
+    @rmtuser --optional user name for the remote instance (same for all) or blank to use default windows auth,
+    @rmtpassword --optional password for the remote instance (same for all) or blank to use default windows auth
+```
+
+### Create remote collector jobs
+
+Linked Server collector can be multithreaded and there is no limit on the number of threads providing the performance of the central repository is adequate. The linked server approach creates a table based queue of all remote objects to import with the required dependency \(i.e. meta tables first, the logger tables\) in `[dbo].[sqlwatch_meta_repository_import_queue]`
+
+The queue can be then processed by executing stored procedure:`exec [dbo].[usp_sqlwatch_repository_remote_table_import]`
+
+To increase the number of import threads schedule the above procedure multiple times.
+
+To create default repository agent jobs, please execute the below procedure:
+
+```sql
+exec [dbo].[usp_sqlwatch_config_set_repository_agent_jobs]
+    @threads = --number of thread jobs to create
+```
+
+This will result in the following jobs to be created:
+
+1. A single enqueuing job that will create list of remote objects to pull data from and control how often they are pulled. 
+2. A single or multiple import jobs, depending on the `@threads` variable that will process the import queue. These jobs can run every 1 minute.
+
+![Example of @threads = 8](../../.gitbook/assets/image%20%283%29.png)
+
+## SSIS
+
+### Package Configuration
 
 To configure SSIS package, navigate to the Project in the **Integration Services Catalogs**:
 
-![](../../.gitbook/assets/image%20%2874%29.png)
+![](../../.gitbook/assets/image%20%2876%29.png)
 
 {% hint style="info" %}
 You can apply configuration to the project, or individual packages. The project will contain the collection of all configuration options from child packages.
@@ -16,7 +93,7 @@ You can apply configuration to the project, or individual packages. The project 
 
 The control package `control_import.dtsx` is responsible for orchestrating multi-threaded data collection and execution of the Worker Package `import_remote_data.dtsx`
 
-![](../../.gitbook/assets/image%20%2854%29.png)
+![](../../.gitbook/assets/image%20%2855%29.png)
 
 #### Parameters
 
@@ -39,7 +116,7 @@ SQL User to access central repository or blank for Windows authentication.
 
 The worker package `import_remote_data.dtsx` is responsible for the actual data collection from remote instances into the central repository. 
 
-![](../../.gitbook/assets/image%20%2891%29.png)
+![](../../.gitbook/assets/image%20%2893%29.png)
 
 #### Parameters
 
@@ -75,7 +152,7 @@ SQL Password to access central repository or blank for Windows authentication.
 **repository\_user\_name**  
 SQL User to access central repository or blank for Windows authentication.
 
-## Execution
+### Execution
 
 ### Central repository collector
 

@@ -14,9 +14,9 @@ To open Parameters window, when on the main Dashboard page \(not in Power Query\
 There is no need to go into the Query Editor to edit or modify queries or data sources. Everything is handled through the below parameters.
 {% endhint %}
 
-![](../.gitbook/assets/image%20%2852%29.png)
+![](../.gitbook/assets/image%20%2853%29.png)
 
-![](../.gitbook/assets/image%20%2826%29.png)
+![](../.gitbook/assets/image%20%2827%29.png)
 
 ### SQL Instance
 
@@ -51,9 +51,9 @@ Report interval is an aggregation factor. For example, 15 minutes interval will 
 
 The rule of thumb is the higher the **Performance Report Window** the higher the internal window i.e. lower granularity. 
 
-![24 hours window with 5 minute aggregation](../.gitbook/assets/image%20%289%29.png)
+![24 hours window with 5 minute aggregation](../.gitbook/assets/image%20%2810%29.png)
 
-![24 hour window with 60 minute aggregation](../.gitbook/assets/image%20%2844%29.png)
+![24 hour window with 60 minute aggregation](../.gitbook/assets/image%20%2845%29.png)
 
 ### Performance Report Baselines
 

@@ -34,11 +34,11 @@ Notifications are triggered on the back of a check and deliver simple but inform
 
 ### Pushover
 
-![](../.gitbook/assets/image%20%2865%29.png)
+![](../.gitbook/assets/image%20%2867%29.png)
 
 ### Email
 
-![](../.gitbook/assets/image%20%2869%29.png)
+![](../.gitbook/assets/image%20%2871%29.png)
 
 
 
