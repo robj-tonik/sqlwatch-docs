@@ -4,29 +4,29 @@
 
 ## Screenshots
 
-![Servers overview](.gitbook/assets/image%20%2878%29.png)
+![Servers overview](.gitbook/assets/image%20%2883%29.png)
 
 ![Performance Advisory](.gitbook/assets/image%20%288%29.png)
 
-![I/O &amp; Memory](.gitbook/assets/image%20%2872%29.png)
+![I/O &amp; Memory](.gitbook/assets/image%20%2876%29.png)
 
-![Locks &amp; Pages](.gitbook/assets/image%20%2890%29.png)
+![Locks &amp; Pages](.gitbook/assets/image%20%2895%29.png)
 
-![Data &amp; Log Files](.gitbook/assets/image%20%2834%29.png)
+![Data &amp; Log Files](.gitbook/assets/image%20%2835%29.png)
 
-![Wait Stats](.gitbook/assets/image%20%2857%29.png)
+![Wait Stats](.gitbook/assets/image%20%2858%29.png)
 
-![Blocking](.gitbook/assets/image%20%2861%29.png)
+![Blocking](.gitbook/assets/image%20%2864%29.png)
 
-![WhoIsActive](.gitbook/assets/image%20%2837%29.png)
+![WhoIsActive](.gitbook/assets/image%20%2838%29.png)
 
-![Agent Jobs](.gitbook/assets/image%20%2879%29.png)
+![Agent Jobs](.gitbook/assets/image%20%2884%29.png)
 
-![Index statistics &amp; Histogram](.gitbook/assets/image%20%2826%29.png)
+![Index statistics &amp; Histogram](.gitbook/assets/image%20%2827%29.png)
 
-![Missing index analysis](.gitbook/assets/image%20%2894%29.png)
+![Missing index analysis](.gitbook/assets/image%20%2899%29.png)
 
-![Disk utilisation](.gitbook/assets/image%20%2824%29.png)
+![Disk utilisation](.gitbook/assets/image%20%2825%29.png)
 
-![Generic performance counter analysis](.gitbook/assets/image%20%2835%29.png)
+![Generic performance counter analysis](.gitbook/assets/image%20%2836%29.png)
 

@@ -42,7 +42,7 @@ The rule of thumb is the higher the **Performance Report Window** the higher the
 
 ![24 hours window with 5 minute interval](../../.gitbook/assets/image%20%2810%29.png)
 
-![24 hour window with 60 minute interval](../../.gitbook/assets/image%20%2845%29.png)
+![24 hour window with 60 minute interval](../../.gitbook/assets/image%20%2846%29.png)
 
 The parameter can be overridden by the user
 
