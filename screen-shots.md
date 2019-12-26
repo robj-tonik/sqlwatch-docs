@@ -4,27 +4,27 @@
 
 ## Screenshots
 
-![Servers overview](.gitbook/assets/image%20%2883%29.png)
+![Servers overview](.gitbook/assets/image%20%2884%29.png)
 
 ![Performance Advisory](.gitbook/assets/image%20%288%29.png)
 
-![I/O &amp; Memory](.gitbook/assets/image%20%2876%29.png)
+![I/O &amp; Memory](.gitbook/assets/image%20%2877%29.png)
 
-![Locks &amp; Pages](.gitbook/assets/image%20%2895%29.png)
+![Locks &amp; Pages](.gitbook/assets/image%20%2896%29.png)
 
 ![Data &amp; Log Files](.gitbook/assets/image%20%2835%29.png)
 
-![Wait Stats](.gitbook/assets/image%20%2858%29.png)
+![Wait Stats](.gitbook/assets/image%20%2859%29.png)
 
-![Blocking](.gitbook/assets/image%20%2864%29.png)
+![Blocking](.gitbook/assets/image%20%2865%29.png)
 
 ![WhoIsActive](.gitbook/assets/image%20%2838%29.png)
 
-![Agent Jobs](.gitbook/assets/image%20%2884%29.png)
+![Agent Jobs](.gitbook/assets/image%20%2885%29.png)
 
 ![Index statistics &amp; Histogram](.gitbook/assets/image%20%2827%29.png)
 
-![Missing index analysis](.gitbook/assets/image%20%2899%29.png)
+![Missing index analysis](.gitbook/assets/image%20%28100%29.png)
 
 ![Disk utilisation](.gitbook/assets/image%20%2825%29.png)
 
