@@ -12,11 +12,13 @@ The Central Repository Server will also be monitored locally, in the same way as
 
 ## Remote Data Collection
 
-Data collection from remote instances can be done with SSIS or via Linked Server.
+Data collection from remote instances can be done with **SSIS** or by using **Linked Server**.
 
 ### Linked Server
 
-No additional components are requied when using Linked Server. 
+{% hint style="success" %}
+No additional components are requied when using Linked Server.
+{% endhint %}
 
 ### SQL Integration Service \(SSIS\)
 
