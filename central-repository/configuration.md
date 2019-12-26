@@ -29,7 +29,7 @@ exec [dbo].[usp_sqlwatch_user_repository_add_remote_instance]
 
 ## Linked Server
 
-In order to invoke collection via Linked Server, linked server to SQLWATCH database on each monitored instance must be created. This can be achieved by executing stored procedure `dbo.usp_sqlwatch_user_repository_create_linked_server`
+In order to invoke collection via Linked Server, a linked server object to the SQLWATCH database on each monitored instance must be created. This can be achieved by executing stored procedure:`[dbo].[usp_sqlwatch_user_repository_create_linked_server]`
 
 ###  Create all required linked servers
 
