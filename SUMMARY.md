@@ -41,8 +41,7 @@
 * [Installation](central-repository/installation/README.md)
   * [Removal](central-repository/installation/removal.md)
   * [Upgrade](central-repository/installation/upgrade.md)
-* [Configuration](central-repository/configuration/README.md)
-  * [Define remote instances for collection](central-repository/configuration/define-remote-instances-for-collection.md)
+* [Configuration](central-repository/configuration.md)
 * [Known Issues](central-repository/known-issues.md)
 
 ## Power BI Dashboard <a id="dashboard"></a>
