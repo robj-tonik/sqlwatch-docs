@@ -10,7 +10,15 @@ Central Repository is just another SQLWATCH database, the same requirements and 
 
 The Central Repository Server will also be monitored locally, in the same way as any other SQLWATCH deployment.
 
-## SQL Integration Service \(SSIS\)
+## Remote Data Collection
+
+Data collection from remote instances can be done with SSIS or via Linked Server.
+
+### Linked Server
+
+No additional components are requied when using Linked Server. 
+
+### SQL Integration Service \(SSIS\)
 
 SSIS Package is used to download data from remote SQLWATCH databases.
 

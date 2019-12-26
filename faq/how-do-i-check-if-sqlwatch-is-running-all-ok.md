@@ -2,7 +2,7 @@
 
 SQLWATCH contains many components that are invoked by the SQL Agent Jobs or Windows Task Scheduler. Any failures should manifest in these tasks failing. 
 
-SQLWATCH also contains a number of built-in self-checks that ensure correct the execution. You can list any problematic checks with the below query. Running this on the central repository will also evalaute all remote instances, including any import errors:
+SQLWATCH also contains a number of default self-checks \(checks with the negative IDs\) that ensure correct the execution. You can list any problematic checks with the below query. Running this on the central repository will also evalaute all remote instances, including any import errors:
 
 ```sql
 select *
