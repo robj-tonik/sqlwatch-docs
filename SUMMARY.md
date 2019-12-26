@@ -71,3 +71,7 @@
 
 ## Hot Fixes <a id="fixes"></a>
 
+## FAQ
+
+* [How do I check if SQLWATCH is running all OK?](faq/how-do-i-check-if-sqlwatch-is-running-all-ok.md)
+
