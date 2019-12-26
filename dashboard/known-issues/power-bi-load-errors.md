@@ -2,7 +2,7 @@
 
 You may experience errors during data load into Power BI that may look similar to the below:
 
-![](../../.gitbook/assets/image%20%2896%29.png)
+![](../../.gitbook/assets/image%20%2897%29.png)
 
 This is caused by Privacy Settings in Power BI which you will have to disable:
 

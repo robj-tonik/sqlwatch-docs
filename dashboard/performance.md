@@ -54,13 +54,13 @@ Baselines are fantastic way to compare same periods of time in an offset. For ex
 
 The Generic Performance Analyser tab shows all Performance Counters without aggregation. It's purpose is to drill down into details. Only enable it when you are debugging performance issues. 
 
-![](../.gitbook/assets/image%20%2865%29.png)
+![](../.gitbook/assets/image%20%2866%29.png)
 
 ### Filter Central Repository
 
 When using Central Repository, data for all servers is downloaded into Power BI. If you are investigating specific SQL Instance, you can apply filter so only data for this instance is downloaded:
 
-![](../.gitbook/assets/image%20%2848%29.png)
+![](../.gitbook/assets/image%20%2849%29.png)
 
 ## 
 
