@@ -32,6 +32,7 @@
     * [Add or modify check](notifications/how-to/get-notified-when-disk-has-low-free-space.md)
     * [Add or modify action](notifications/how-to/add-or-modify-action.md)
     * [Add or modify report](notifications/how-to/get-notified-about-blocking-chains.md)
+  * [Process Flow](notifications/process-flow.md)
 * [Large Environments](large-environments.md)
 
 ## Central Repository
