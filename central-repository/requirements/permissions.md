@@ -2,7 +2,7 @@
 
 ## SQL Server permissions required for Central Repository
 
-### SQL Server Integration Services
+### When using SQL Server Integration Services
 
 Permissions required on the remote instance:
 
@@ -18,5 +18,7 @@ Permissions required on the local instance where central repository is
 |  | `db_datawriter` | To write data from the remote instance |
 |  | `db_ddladmin` | For bulk inserts |
 
+### When using Linked Server
 
+TBC
 
