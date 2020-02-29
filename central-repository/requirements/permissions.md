@@ -8,7 +8,7 @@ Permissions required on the remote instance:
 | :--- | :--- | :--- |
 | SQLWATCH | `db_datareader` | To read data from the remote instance |
 
-Permissions required on the local instance where central repository is:
+Permissions required on the local instance where central repository is
 
 | Database | Permissions | Description |
 | :--- | :--- | :--- |
