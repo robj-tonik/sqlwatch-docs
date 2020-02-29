@@ -2,6 +2,8 @@
 
 ## SQL Server permissions required for Central Repository
 
+### SQL Server Integration Services
+
 Permissions required on the remote instance:
 
 | Database | Permissions | Description |
