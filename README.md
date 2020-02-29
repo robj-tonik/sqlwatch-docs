@@ -5,7 +5,7 @@
 {% endhint %}
 
 {% hint style="info" %}
-If you find gaps in the documentation please let us know
+If you find gaps in the documentation or something is not clear please let me know so I can update it as soon as possible.
 {% endhint %}
 
 This is SQLWATCH documentation portal. 
