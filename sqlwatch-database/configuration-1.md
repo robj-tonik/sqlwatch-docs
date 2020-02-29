@@ -73,7 +73,7 @@ Please note the `instance_name` is dynamic and contains actual names of objects 
 
 ## Extended Events Sessions \(XES\)
 
-A number of Extended Events Sessions are also deployed with SQLWATCH in a disabled state. This is because some DBAs will have their own XES sessions and we would not want to interfere without prior notice. However, certain functionality will not be available, for the full experience please enable SQWLATCH sessions.
+A number of Extended Events Sessions are also deployed with SQLWATCH in an **enabled state**. This is because some DBAs will have their own XES sessions and we would not want to interfere without prior notice. However, certain functionality will not be available, for the full experience please enable SQWLATCH sessions.
 
 ![](../.gitbook/assets/image%20%2891%29.png)
 
