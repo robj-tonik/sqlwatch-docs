@@ -1,8 +1,20 @@
 # Permissions
 
-### SQL Server permissions required for Central Repository
+## SQL Server permissions required for Central Repository
 
-Central Repository requires `SELECT` permission on the remote instances as well as `EXECUTE` permission on the following stored procedures in the central repository:
+Permissions required on the remote instance:
 
-`dbo.usp_sqlwatch_internal_get_last_snapshot_time_in_tables`
+| Database | Permissions | Description |
+| :--- | :--- | :--- |
+| SQLWATCH | `db_datareader` | To read data from the remote instance |
+
+Permissions required on the local instance where central repository is:
+
+| Database | Permissions | Description |
+| :--- | :--- | :--- |
+| SQLWATCH | `db_datareader` | To read data from the local instance |
+|  | `db_datawriter` | To write data from the remote instance |
+|  | `db_ddladmin` | For bulk inserts |
+
+
 
