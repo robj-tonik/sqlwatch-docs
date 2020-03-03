@@ -20,7 +20,7 @@ To work around this issue, we have to unregister data-tier application. This can
 
 Right click database -&gt; Tasks -&gt; Delete Data-Tier Application
 
-![](../.gitbook/assets/image%20%2873%29.png)
+![](../.gitbook/assets/image%20%2874%29.png)
 
 Alternatively, you can use T-SQL to achieve the same:
 
