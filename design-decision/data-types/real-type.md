@@ -14,11 +14,11 @@ Quick conversion to Mega Bytes reveals negligible loss of accuracy:
 
 ![](../../.gitbook/assets/image%20%2817%29.png)
 
-![](../../.gitbook/assets/image%20%28105%29.png)
+![](../../.gitbook/assets/image%20%28106%29.png)
 
 Taking it one step further and simulating even larger number:
 
-![](../../.gitbook/assets/image%20%2887%29.png)
+![](../../.gitbook/assets/image%20%2888%29.png)
 
 ![](../../.gitbook/assets/image%20%285%29.png)
 
