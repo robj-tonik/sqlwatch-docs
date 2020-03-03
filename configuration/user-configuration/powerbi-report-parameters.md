@@ -40,9 +40,9 @@ Which means for 1 hour worth of data the granularity will 2 minutes and for 7 da
 
 The rule of thumb is the higher the **Performance Report Window** the higher the internal window i.e. lower granularity. 
 
-![24 hours window with 5 minute interval](../../.gitbook/assets/image%20%2810%29.png)
+![24 hours window with 5 minute interval](../../.gitbook/assets/image%20%2811%29.png)
 
-![24 hour window with 60 minute interval](../../.gitbook/assets/image%20%2848%29.png)
+![24 hour window with 60 minute interval](../../.gitbook/assets/image%20%2849%29.png)
 
 The parameter can be overridden by the user
 
