@@ -6,7 +6,7 @@ Actions module is responsible for sending notifications and performing different
 
 Action definition is stored in table `[dbo].[sqlwatch_config_action]`
 
-![\[dbo\].\[sqlwatch\_config\_action\]](../.gitbook/assets/image%20%2879%29.png)
+![\[dbo\].\[sqlwatch\_config\_action\]](../.gitbook/assets/image%20%2880%29.png)
 
 ### Action executable
 

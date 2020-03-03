@@ -83,7 +83,7 @@ This will result in the following jobs to be created:
 
 Each thread registers itself in the threads table `[dbo].[sqlwatch_meta_repository_import_thread]` which contains the name of the SQL Agent Job currently running the thread
 
-![\[dbo\].\[sqlwatch\_meta\_repository\_import\_thread\]](../.gitbook/assets/image%20%2883%29.png)
+![\[dbo\].\[sqlwatch\_meta\_repository\_import\_thread\]](../.gitbook/assets/image%20%2884%29.png)
 
 Import status of each object can be seen in the `[dbo].[sqlwatch_meta_repository_import_status]` table:
 
@@ -95,7 +95,7 @@ Import status of each object can be seen in the `[dbo].[sqlwatch_meta_repository
 
 To configure SSIS package, navigate to the Project in the **Integration Services Catalogs**:
 
-![](../.gitbook/assets/image%20%2882%29.png)
+![](../.gitbook/assets/image%20%2883%29.png)
 
 {% hint style="info" %}
 You can apply configuration to the project, or individual packages. The project will contain the collection of all configuration options from child packages.
@@ -130,7 +130,7 @@ SQL User to access central repository or blank for Windows authentication.
 
 The worker package `import_remote_data.dtsx` is responsible for the actual data collection from remote instances into the central repository. 
 
-![](../.gitbook/assets/image%20%28101%29.png)
+![](../.gitbook/assets/image%20%28102%29.png)
 
 #### Parameters
 

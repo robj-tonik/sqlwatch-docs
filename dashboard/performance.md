@@ -54,7 +54,7 @@ Baselines are fantastic way to compare same periods of time in an offset. For ex
 
 The Generic Performance Analyser tab shows all Performance Counters without aggregation. It's purpose is to drill down into details. Only enable it when you are debugging performance issues. 
 
-![](../.gitbook/assets/image%20%2867%29.png)
+![](../.gitbook/assets/image%20%2868%29.png)
 
 ### Filter Central Repository
 
