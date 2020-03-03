@@ -38,6 +38,7 @@
 ## Central Repository
 
 * [Requirements](central-repository/requirements/README.md)
+  * [Performance overhead on the remote instance](central-repository/requirements/performance-overhead-on-the-remote-instance.md)
   * [Permissions](central-repository/requirements/permissions.md)
 * [Installation](central-repository/installation/README.md)
   * [Removal](central-repository/installation/removal.md)

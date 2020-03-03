@@ -12,7 +12,7 @@ The frequent data collectors such as performance run every minute and take less 
 
 The below screenshot shows a 60 seconds window of CPU utilisation of the `sqlservr.exe` process. The spike is the performance collection which lasts few milliseconds:
 
-![](../../.gitbook/assets/image%20%2866%29.png)
+![](../../.gitbook/assets/image%20%2867%29.png)
 
 #### Additional Reading:
 
