@@ -5,7 +5,7 @@ SQLWATCH is designed with minimum overhead. It utilises [SQL Server Extended Eve
 > SQL Server The Extended Events architecture enables users to collect as much or as little data as is necessary to troubleshoot or identify a performance problem. Extended Events is configurable, and it scales very well.
 
 {% hint style="info" %}
-I have not observed nor has any performance overhead or increased CPU utilisation been reported to me. If you notice anything suspicious please feed back ASAP.
+I have not observed any performance overhead or increased CPU utilisation over a long period of time. It has also not been reported to me. If you notice anything suspicious please feed back ASAP.
 {% endhint %}
 
 The frequent data collectors such as performance run every minute and take less than a second to execute. There are areas for improvement in the way the XML output from XE sessions is being parsed which will be addressed in the future releases.
