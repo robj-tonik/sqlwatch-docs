@@ -1,7 +1,7 @@
 # Welcome
 
 {% hint style="warning" %}
-**The documentation for version 2.2. is still work in progress and not yet complete. It may change at any time and be incomplete. If you are in doubt please speak to us on the Slack channel or the user forum**
+**The documentation for version 2.2. is still work in progress and not yet complete. It may change at any time. If you are in doubt please speak to us on the Slack channel or the user forum**
 {% endhint %}
 
 {% hint style="info" %}
