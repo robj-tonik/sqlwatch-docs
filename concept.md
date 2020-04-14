@@ -20,7 +20,7 @@ There are 3 three main and independent components:
 
 ### SQLWATCH Database
 
-Database is deployed locally and utilises local agent jobs for data collection. Alternatively, collection can be invoked via local Windows Task Scheduler. **Currently no remote collection is possible**.
+Database is deployed locally and utilises local SQL agent jobs for data collection. Alternatively, collection can be invoked via local Windows Task Scheduler. **Currently no remote collection is possible**.
 
 ### PowerBI Dashboard
 
@@ -28,5 +28,5 @@ The dashboard connects to SQLWATCH database and visualises collected data.
 
 ### Central Repository
 
-Optional central repository can be installed to collect data from remote SQLWATCH instances. Note that the repository only loads data from remote SQLWATCH databases into the central database to enable reporting across multiple servers and to enable shorted retention on remote instances. 
+Optional central repository can be installed to collect data from remote SQLWATCH instances. Note that the repository only loads data from remote SQLWATCH databases into the central database to enable reporting across multiple servers and to enable shortened retention on remote instances. The Central repository database is just ordinary SQLWATCH database where data from remote databases is being loaded with SQL Server Integration package \(SSIS\) or via linked server.
 
