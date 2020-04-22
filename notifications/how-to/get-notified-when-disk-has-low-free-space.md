@@ -19,7 +19,7 @@ exec [dbo].[usp_sqlwatch_user_add_check]
 	/* SQL Query to perform the check. Must return single value only: */
 	,@check_query = 'select avg(cntr_value_calculated) 
 from dbo.vw_sqlwatch_report_fact_perf_os_performance_counters
-where counter_name = "Processor Time %"
+where counter_name = ''Processor Time %''
 and report_time > dateadd(minute,-5,getutcdate())'
 
 	/* How often do we want this check to run.
@@ -43,8 +43,8 @@ and report_time > dateadd(minute,-5,getutcdate())'
 	,@check_action_id = 1
 
 	/* Whether to action every failure or just on first failure.
-		 = 0 : When the check fails it will triggen an action on the first failure. 
-				   It will not trigger another action until it recovers back to OK and failes again
+		 = 0 : When the check fails it will trigger an action on the first failure. 
+				   It will not trigger another action until it recovers back to OK and fails again
 		 = 1 : When the check fails it will trigger an action, and it will be triggering
 					 an action every time the value changes and is not OK. It will NOT trigger
 					 another action if the value does not change. We can use "reminders" for that */
