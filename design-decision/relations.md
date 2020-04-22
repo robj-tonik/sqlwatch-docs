@@ -8,3 +8,7 @@ In this instance, cascade actions are handled by triggers:
 
 ![](../.gitbook/assets/image%20%2846%29.png)
 
+## Entity Relationship Diagram
+
+![SQLWATCH 2.3 ERD](../.gitbook/assets/sqlwatch_2.3.png)
+

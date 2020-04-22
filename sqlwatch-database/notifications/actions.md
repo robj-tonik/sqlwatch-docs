@@ -6,7 +6,7 @@ Actions module is responsible for sending notifications and performing different
 
 Action definition is stored in table `[dbo].[sqlwatch_config_action]`
 
-![\[dbo\].\[sqlwatch\_config\_action\]](../.gitbook/assets/image%20%2881%29.png)
+![\[dbo\].\[sqlwatch\_config\_action\]](../../.gitbook/assets/image%20%2881%29.png)
 
 ### Action executable
 
@@ -81,7 +81,7 @@ https://docs.sqlwatch.io
 
 Will result in the following content:
 
-![](../.gitbook/assets/image%20%2853%29.png)
+![](../../.gitbook/assets/image%20%2853%29.png)
 
 In addition, actions that trigger reports have these variables exposed:
 
@@ -129,7 +129,7 @@ For example, if we have a check that calls **Disk Utilisation Report**, the foll
 
 Will generate the following report:
 
-![](../.gitbook/assets/image%20%2812%29.png)
+![](../../.gitbook/assets/image%20%2812%29.png)
 
 ## Attributes
 

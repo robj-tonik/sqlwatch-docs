@@ -5,7 +5,7 @@ Central Repository can download data from remote instances in two ways:
 1. Linked Server
 2. SQL Server Integration Services \(SSIS\)
 
-Both methods do a FULL load of the relatively small `meta*` tables and delta loads of the `logger*` tables that contain the actual performance data. Whilst SSIS is a performance optimised engine and may perform faster, there is no noticable performance advantage of using either method and both perform in a similar way when pulling remote data. The advantage of using Linked Server is that it does not require SSIS and can be run on a SQL Server Express Edition with jobs invoked via Windows Scheduled Tasks instead of the SQL Agent. 
+Both methods do a FULL load of the relatively small `meta*` tables and delta loads of the `logger*` tables that contain the actual performance data. Whilst SSIS is a performance optimised engine and may perform faster, there is no noticable performance advantage of using either method and both perform in a similar way when pulling remote data. The advantage of using Linked Server is that it does not require SSIS and can be run on a SQL Server Express Edition with jobs invoked via Windows Scheduled Tasks instead of the SQL Agent.
 
 > Linked Server approach is build programatically and therefore easier to develop and maintain. It contains a number of improvements over the SSIS method, such as message logging to a table, automatic table import without the explicit declaration \(SSIS requires meta data refresh which slows down the development\) and force full load of the header tables if missing keys are detected.
 
@@ -13,7 +13,7 @@ Both methods do a FULL load of the relatively small `meta*` tables and delta loa
 
 In order for the central respository to know which remote instances to collect data from, they must be defined in `[dbo].[sqlwatch_config_sql_instance]`
 
- This can be achieved by directly inserting data into the table, or by executing a stored procedure:
+This can be achieved by directly inserting data into the table, or by executing a stored procedure:
 
 ```sql
 exec [dbo].[usp_sqlwatch_user_repository_add_remote_instance]
@@ -33,9 +33,9 @@ exec [dbo].[usp_sqlwatch_user_repository_add_remote_instance]
 
 In order to invoke collection via Linked Server, a linked server object to the SQLWATCH database on each monitored instance must be created. This can be achieved by executing stored procedure:`[dbo].[usp_sqlwatch_user_repository_create_linked_server]`
 
-###  Create all required linked servers
+### Create all required linked servers
 
-The procedure can create all required linked servers as per the  `[linked_server_name]` column in `[dbo].[sqlwatch_config_sql_instance]` table:
+The procedure can create all required linked servers as per the `[linked_server_name]` column in `[dbo].[sqlwatch_config_sql_instance]` table:
 
 ```sql
 exec [dbo].[usp_sqlwatch_user_repository_create_linked_server]
@@ -55,7 +55,7 @@ exec [dbo].[usp_sqlwatch_user_repository_create_linked_server]
     @rmtpassword --optional password for the remote instance (same for all) or blank to use default windows auth
 ```
 
-{% embed url="https://docs.microsoft.com/en-us/sql/relational-databases/linked-servers/create-linked-servers-sql-server-database-engine" %}
+{% embed url="https://docs.microsoft.com/en-us/sql/relational-databases/linked-servers/create-linked-servers-sql-server-database-engine" caption="" %}
 
 ### Create remote collector jobs
 
@@ -101,7 +101,7 @@ To configure SSIS package, navigate to the Project in the **Integration Services
 You can apply configuration to the project, or individual packages. The project will contain the collection of all configuration options from child packages.
 {% endhint %}
 
-{% embed url="https://docs.microsoft.com/en-us/sql/integration-services/catalog/ssis-catalog" %}
+{% embed url="https://docs.microsoft.com/en-us/sql/integration-services/catalog/ssis-catalog" caption="" %}
 
 ### Control package
 
@@ -128,7 +128,7 @@ SQL User to access central repository or blank for Windows authentication.
 
 ### Worker Package
 
-The worker package `import_remote_data.dtsx` is responsible for the actual data collection from remote instances into the central repository. 
+The worker package `import_remote_data.dtsx` is responsible for the actual data collection from remote instances into the central repository.
 
 ![](../.gitbook/assets/image%20%28104%29.png)
 
@@ -172,7 +172,7 @@ SQL User to access central repository or blank for Windows authentication.
 
 The package does delta loads of the `logger*` tables and full loads of the `meta*` tables. Meta tables are relatively small and should not contain more than a few hundred rows. Logger tables can be quite big and thanks to delta loads, the more often the package runs, the less data it pulls with every run.
 
-There is no predefined agent job for the SSIS based repository collector due to variety of environments and folder names in SSISDB. Once the package has been deployed onto the preferred Integration Services Server and configured please crate agent job with the schedule as you please. 
+There is no predefined agent job for the SSIS based repository collector due to variety of environments and folder names in SSISDB. Once the package has been deployed onto the preferred Integration Services Server and configured please crate agent job with the schedule as you please.
 
 When scheduling the `dtsx`, the control package should be called from the agent job:
 
