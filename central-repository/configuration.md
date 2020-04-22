@@ -68,7 +68,7 @@ To increase the number of import threads schedule the above procedure multiple t
 To create default repository agent jobs, please execute the below procedure:
 
 ```sql
-exec [dbo].[usp_sqlwatch_config_set_repository_agent_jobs]
+exec [dbo].[usp_sqlwatch_config_repository_create_agent_jobs]
     @threads = --number of thread jobs to create
 ```
 
