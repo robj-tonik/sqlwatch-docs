@@ -24,16 +24,16 @@
   * [Database drift](sqlwatch-database/known-issues/database-drift.md)
   * [Login failed error when running disk logger](sqlwatch-database/known-issues/login-failed-error-when-running-disk-logger.md)
   * [Deadlock when creating database](sqlwatch-database/known-issues/deadlock-when-creating-database.md)
-* [Notifications](notifications/README.md)
-  * [Checks](notifications/checks.md)
-  * [Actions](notifications/actions.md)
-  * [Reports](notifications/reports.md)
-  * [How To](notifications/how-to/README.md)
-    * [Add or modify check](notifications/how-to/get-notified-when-disk-has-low-free-space.md)
-    * [Add or modify action](notifications/how-to/add-or-modify-action.md)
-    * [Add or modify report](notifications/how-to/get-notified-about-blocking-chains.md)
-  * [Process Flow](notifications/process-flow.md)
-* [Large Environments](large-environments.md)
+* [Notifications](sqlwatch-database/notifications/README.md)
+  * [Checks](sqlwatch-database/notifications/checks.md)
+  * [Actions](sqlwatch-database/notifications/actions.md)
+  * [Reports](sqlwatch-database/notifications/reports.md)
+  * [How To](sqlwatch-database/notifications/how-to/README.md)
+    * [Add or modify check](sqlwatch-database/notifications/how-to/get-notified-when-disk-has-low-free-space.md)
+    * [Add or modify action](sqlwatch-database/notifications/how-to/add-or-modify-action.md)
+    * [Add or modify report](sqlwatch-database/notifications/how-to/get-notified-about-blocking-chains.md)
+  * [Process Flow](sqlwatch-database/notifications/process-flow.md)
+* [Large Environments](sqlwatch-database/large-environments.md)
 
 ## Central Repository
 
@@ -69,8 +69,6 @@
 ## Reference
 
 * [Data-Tier Application Package](reference/data-tier-application-package.md)
-
-## Hot Fixes <a id="fixes"></a>
 
 ## FAQ
 
