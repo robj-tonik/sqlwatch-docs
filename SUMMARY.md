@@ -70,6 +70,10 @@
 
 * [Data-Tier Application Package](reference/data-tier-application-package.md)
 
+## Integrations
+
+* [Send notifications to Slack and Teams](integrations/send-notifications-to-slack-and-teams.md)
+
 ## FAQ
 
 * [How do I check if SQLWATCH is running OK?](faq/how-do-i-check-if-sqlwatch-is-running-all-ok.md)
