@@ -1,6 +1,6 @@
 # dbachecks
 
-Integration with dbachecks allows SQLWATCH to pick up dbachecks' failures and notify via the SQLWATCH actions mechanism. 
+Integration with dbachecks allows SQLWATCH to pick up dbachecks' failures and notify via the SQLWATCH actions mechanism as well as show on the SQLWATCH dashboard. This is not a replacement for the dbachecks dashboard but a simple indication to allow time correlation with SQLWATCH performance metrics
 
 The SQLWATCH check is simply querying the `dbo.dbachecksResults` table for any records where the result equals to 'Failed'. 
 
