@@ -9,7 +9,7 @@ description: Minimum requirements for the Power BI
 Power BI Desktop release cycle is so frequent that is difficult to target a specific version, however, as a rule of thumb, the version should be equal or greater than the SQLWATCH dashboard. Older versions may not work. In case of any problems opening the file it is advisable to update Power BI Desktop first.
 
 {% hint style="success" %}
-The current version of SQLWATCH Dashboard was developed in Power BI Desktop Version: 2.78.5740.981 64-bit \(February 2020\)
+The current version of SQLWATCH Dashboard was developed in Power BI Desktop Version: **2.81.5831.821 64-bit \(May 2020\)**
 {% endhint %}
 
 {% hint style="info" %}
