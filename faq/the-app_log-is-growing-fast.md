@@ -10,7 +10,7 @@ You can changes this behaviour in the global config:
 
 ```sql
   UPDATE [dbo].[sqlwatch_config]
-  SET [config_value] = 0
+  SET [config_value] = 0 -- 1 log INFO, 0 do not log INFO
   WHERE [config_id] = 7
 ```
 
@@ -20,7 +20,7 @@ Before version `2.4` the default retention period for the `app_log` table was 30
 
 ```sql
   UPDATE [dbo].[sqlwatch_config]
-  SET [config_value] = 7
+  SET [config_value] = 7 --retention days. 
   WHERE [config_id] = 1
 ```
 
