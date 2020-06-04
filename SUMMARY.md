@@ -65,6 +65,7 @@
 * [Primary Keys](design-decision/primary-keys.md)
 * [Data Compression](design-decision/data-compression.md)
 * [Configuration Items](design-decision/configuration-items.md)
+* [Using Apply instead of Join](design-decision/using-apply-instead-of-join.md)
 
 ## Reference
 
