@@ -16,7 +16,7 @@ In order for the central respository to know which remote instances to collect d
 This can be achieved by directly inserting data into the table, or by executing a stored procedure:
 
 ```sql
-exec [dbo].[usp_sqlwatch_user_repository_add_remote_instance]
+exec [dbo].[usp_sqlwatch_config_repository_add_remote_instance]
     @sql_instance --sql instance name,
     @hostname --hostname, if different to the @sql_instance, for example this could be in IP if no DNS records present,
     @sql_port --non standard sql port, leave NULL for the default 1433,
@@ -38,7 +38,7 @@ In order to invoke collection via Linked Server, a linked server object to the S
 The procedure can create all required linked servers as per the `[linked_server_name]` column in `[dbo].[sqlwatch_config_sql_instance]` table:
 
 ```sql
-exec [dbo].[usp_sqlwatch_user_repository_create_linked_server]
+exec [dbo].[usp_sqlwatch_config_repository_create_linked_server]
     @rmtuser --optional user name for the remote instance (same for all) or blank to use default windows auth,
     @rmtpassword --optional password for the remote instance (same for all) or blank to use default windows auth
 ```
@@ -48,7 +48,7 @@ exec [dbo].[usp_sqlwatch_user_repository_create_linked_server]
 Alternatively, it can create only specific linked server. This is the default bahavior when executing `[dbo].[usp_sqlwatch_user_repository_add_remote_instance]`
 
 ```sql
-exec [dbo].[usp_sqlwatch_user_repository_create_linked_server]
+exec [dbo].[usp_sqlwatch_config_repository_create_linked_server]
     @sql_instance --name of the existing sql instance in [dbo].[sqlwatch_config_sql_instance],
     @linked_server --optional, name of the required linked server. if blank a default name will be created,
     @rmtuser --optional user name for the remote instance (same for all) or blank to use default windows auth,
